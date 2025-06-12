@@ -30,10 +30,10 @@ export default function Home() {
 
 
       {/* Core Paragraph */}
-      <p className="max-w-3xl text-base sm:text-lg text-muted-foreground leading-relaxed">
+      <p className="max-w-3xl text-left sm:text-lg text-muted-foreground leading-relaxed">
         One of the very best developers in town if you could give me a chance to showcase it! What makes a good developer?
         Someone who does exactly what it requires to solve the problem in the best possible way. I research and create the most efficient back end,
-        followed by the cleanest, not-cluttered, straight-to-the-point front end — fast, attention-grabbing, and conversion-focused.
+        followed by the cleanest, not-cluttered, straight-to-the-point front end, fast, attention-grabbing, and conversion-focused.
         I ensure best-in-class SEO, integrate Google Analytics for valuable traffic data, and implement a CMS to simplify client workflows.
         I'm also certified in social media marketing and use tools like Ocoya, Hootsuite, and PredisAI to boost visibility and engagement.
       </p>
