@@ -18,7 +18,7 @@ export default function Header() {
   return (
     <header className="w-full px-4 py-4 flex items-center justify-between border-b border-gray-300 z-50 relative">
       <Link href="/" className="text-xl font-bold">
-        abhiram.dev
+        Works Of Abhiram
       </Link>
       <Button
         variant="ghost"
