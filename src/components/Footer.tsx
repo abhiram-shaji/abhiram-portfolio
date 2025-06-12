@@ -1,14 +1,13 @@
 'use client';
 
 import Link from 'next/link';
+import Modal from './Modal';
 
 const footerLinks = [
   { label: 'Home', href: '/' },
   { label: 'Github & Gists', href: 'https://github.com/yourusername' },
   { label: 'Projects', href: '/projects' },
   { label: 'Contact', href: '/contact' },
-  { label: 'Terms of Service', href: '/terms' },
-  { label: 'Privacy Policy', href: '/privacy' },
 ];
 
 export default function Footer() {
@@ -26,6 +25,18 @@ export default function Footer() {
             {label}
           </Link>
         ))}
+        <Modal
+          title="Terms of Service"
+          trigger={<span className="hover:underline cursor-pointer">Terms of Service</span>}
+        >
+          <p>By using this site, you agree to the following terms and conditions...</p>
+        </Modal>
+        <Modal
+          title="Privacy Policy"
+          trigger={<span className="hover:underline cursor-pointer">Privacy Policy</span>}
+        >
+          <p>We respect your privacy and will not share your data without consent...</p>
+        </Modal>
       </div>
       <p className="text-xs">&copy; {new Date().getFullYear()} Abhiram Shaji. All rights reserved.</p>
     </footer>
