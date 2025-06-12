@@ -37,9 +37,8 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full px-4 py-4 flex items-center justify-between z-50 transition-transform duration-300 ${
-          showHeader ? 'translate-y-0' : '-translate-y-full'
-        }`}
+        className={`fixed top-0 left-0 w-full px-4 py-4 md:pt-12 flex items-center justify-between z-50 transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-full'
+          }`}
       >
         {/* Centered floating pill navbar - Desktop */}
         <nav className="hidden md:flex absolute inset-0 justify-center items-center pointer-events-none">
@@ -48,11 +47,10 @@ export default function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`transition-colors ${
-                  pathname === item.href
+                className={`transition-colors ${pathname === item.href
                     ? 'text-teal-600 font-semibold'
                     : 'text-foreground hover:text-muted-foreground'
-                }`}
+                  }`}
               >
                 {item.label}
               </Link>
@@ -65,7 +63,7 @@ export default function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden text-foreground p-3 ml-auto"
+            className="md:hidden text-foreground p-3 ml-auto border border-gray-300 rounded-full bg-white/70 backdrop-blur"
             onClick={() => setMenuOpen(true)}
             aria-label="Open menu"
           >
@@ -82,7 +80,7 @@ export default function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-foreground p-3"
+              className="text-foreground p-3 ml-auto border border-gray-300 rounded-full bg-white/70 backdrop-blur"
               onClick={() => setMenuOpen(false)}
               aria-label="Close menu"
             >
@@ -95,9 +93,8 @@ export default function Header() {
               key={item.label}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className={`hover:underline transition-colors ${
-                pathname === item.href ? 'text-teal-600 font-semibold' : ''
-              }`}
+              className={`hover:underline transition-colors ${pathname === item.href ? 'text-teal-600 font-semibold' : ''
+                }`}
               target={item.href.startsWith('http') ? '_blank' : undefined}
               rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
             >
