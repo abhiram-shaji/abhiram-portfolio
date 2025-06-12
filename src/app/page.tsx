@@ -8,10 +8,12 @@ import ProfileIntro from '@/components/ProfileIntro';
 
 export default function Home() {
   return (
-    <section className="min-h-[90vh] flex flex-col items-center justify-center text-center gap-10 px-4 py-10 md:pt-20">
-      <ProfileHeader />
-      <ProfileIntro />
-      <Socials />
+    <section className="min-h-[90vh] flex items-center justify-center px-4 py-10 md:pt-20">
+      <div className="w-full max-w-5xl flex flex-col gap-10 text-center md:text-left">
+        <ProfileHeader />
+        <ProfileIntro />
+        <Socials />
+      </div>
     </section>
   );
 }
