@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import Socials from '@/components/socials';
 
 export default function Home() {
   return (
@@ -47,6 +48,8 @@ export default function Home() {
         <p><strong>80%</strong> of marketing automation users report an increase in lead generation through social media automation.</p>
         <p>Businesses that invest in social media marketing typically see <strong>24%</strong> revenue growth on average compared to those that don’t.</p>
       </div>
+
+      <Socials />
 
 
     </section>
