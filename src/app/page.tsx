@@ -8,16 +8,18 @@ export default function Home() {
   return (
     <section className="min-h-[90vh] flex flex-col items-center justify-center text-center gap-10 px-4 py-10 md:pt-20">
       {/* Profile Image + Name + Subtitle */}
-      <div className="flex flex-col sm:flex-row items-center gap-4">
+      <div className="flex flex-col sm:flex-row items-center md:gap-20">
         {/* Profile Image */}
-        <div className="w-32 h-32 relative rounded-full overflow-hidden border-4 border-muted shadow-lg">
+        <div className="w-40 h-50 relative rounded-lg overflow-hidden border-4 border-muted shadow-lg group">
           <Image
-            src="https://i.ibb.co/60zNTYJ/pic-abhiram.png"
+            src="https://i.ibb.co/LdGpSJ52/bio-img.jpg"
             alt="Abhiram Shaji"
             fill
-            className="object-cover"
+            className="object-cover transition duration-300 ease-in-out group-hover:grayscale"
           />
         </div>
+
+
 
         {/* Name + Subtitle */}
         <div className="text-center sm:text-left">
@@ -46,15 +48,7 @@ export default function Home() {
         <p>Businesses that invest in social media marketing typically see <strong>24%</strong> revenue growth on average compared to those that don’t.</p>
       </div>
 
-      {/* Buttons */}
-      <div className="flex flex-wrap gap-4 justify-center pt-4">
-        <Link href="/projects">
-          <Button size="lg">View Projects</Button>
-        </Link>
-        <Link href="/contact">
-          <Button variant="outline" size="lg">Contact Me</Button>
-        </Link>
-      </div>
+
     </section>
   )
 }
