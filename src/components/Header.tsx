@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button'; // Assuming ShadCN setup
+import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 const menuItems = [
@@ -14,28 +14,66 @@ const menuItems = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+
+      if (currentY < 50 || currentY < lastScrollY) {
+        setShowHeader(true);
+      } else {
+        setShowHeader(false);
+      }
+
+      setLastScrollY(currentY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <header className="w-full px-4 py-4 flex items-center justify-between border-b border-gray-300 z-50 relative">
+    <header
+      className={`w-full px-4 py-4 flex items-center justify-between border-b border-gray-300 z-50 fixed top-0 left-0 bg-background transition-transform duration-300 ${
+        showHeader ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
       <Link href="/" className="text-xl font-bold">
         Works of Abhiram
       </Link>
-      <Button
-        variant="ghost"
-        size="icon"
-        className="md:hidden"
-        onClick={() => setMenuOpen(!menuOpen)}
-        aria-label="Toggle menu"
-      >
-        {menuOpen ? <X size={24} /> : <Menu size={24} />}
-      </Button>
 
-      {/* Fullscreen Menu */}
+      {!menuOpen && (
+        <Button
+          variant="ghost"
+          size="icon"
+          className="md:hidden text-foreground p-3"
+          onClick={() => setMenuOpen(true)}
+          aria-label="Open menu"
+        >
+          <Menu size={32} />
+        </Button>
+      )}
+
       <nav
-        className={`fixed top-0 left-0 w-full h-full bg-background z-40 transition-transform duration-300 ${
+        className={`fixed top-0 left-0 w-full h-full bg-background z-50 transition-transform duration-300 ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden`}
       >
+        <div className="absolute top-4 right-4">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-foreground p-3"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            <X size={32} />
+          </Button>
+        </div>
+
         <div className="flex flex-col items-center justify-center h-full space-y-8 text-xl font-medium">
           {menuItems.map((item) => (
             <Link
@@ -52,7 +90,6 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Desktop menu */}
       <nav className="hidden md:flex space-x-6 text-sm font-medium">
         {menuItems.map((item) => (
           <Link
