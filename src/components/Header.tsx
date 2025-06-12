@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ThemeToggle from './ThemeToggle';
 import Link from 'next/link';
 
 const menuItems = [
@@ -58,18 +59,21 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Hamburger icon (mobile) */}
-        {!menuOpen && (
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden text-foreground p-3 ml-auto border border-gray-300 rounded-full bg-white/70 backdrop-blur"
-            onClick={() => setMenuOpen(true)}
-            aria-label="Open menu"
-          >
-            <Menu size={32} />
-          </Button>
-        )}
+        <div className="flex items-center gap-2 ml-auto">
+          <ThemeToggle />
+          {/* Hamburger icon (mobile) */}
+          {!menuOpen && (
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden text-foreground p-3 border border-gray-300 rounded-full bg-white/70 backdrop-blur"
+              onClick={() => setMenuOpen(true)}
+              aria-label="Open menu"
+            >
+              <Menu size={32} />
+            </Button>
+          )}
+        </div>
       </header>
 
       {/* Fullscreen mobile nav */}
@@ -93,14 +97,15 @@ export default function Header() {
               key={item.label}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className={`hover:underline transition-colors ${pathname === item.href ? 'text-teal-600 font-semibold' : ''
-                }`}
+              className={`hover:underline transition-colors ${pathname === item.href ? 'text-teal-600 font-semibold' : ''}`}
               target={item.href.startsWith('http') ? '_blank' : undefined}
               rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
             >
               {item.label}
             </Link>
           ))}
+
+          <ThemeToggle />
         </div>
       )}
     </>
