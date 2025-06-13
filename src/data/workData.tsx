@@ -5,6 +5,7 @@ export interface WorkItem {
   company: string;
   role: string;
   logo: string;
+  alt?: string;
   modalContent: ReactNode;
 }
 
@@ -13,6 +14,7 @@ export const works: WorkItem[] = [
     company: 'Deloitte',
     role: 'Frontend + Backend Developer',
     logo: '/deloitte.jpg',
+    alt: 'Deloitte logo',
     modalContent: (
       <>
         <p>
@@ -39,6 +41,7 @@ export const works: WorkItem[] = [
     company: 'Figs Deli',
     role: 'Freelance Web Developer',
     logo: '/fig.png',
+    alt: 'Figs Deli logo',
     modalContent: (
       <>
         <p>
@@ -62,6 +65,7 @@ export const works: WorkItem[] = [
     company: 'Langroove',
     role: 'Full Stack Developer',
     logo: '/langroove.png',
+    alt: 'Langroove logo',
     modalContent: (
       <>
         <p>

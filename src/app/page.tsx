@@ -12,6 +12,17 @@ export default function Home() {
   return (
     <>
       <Head>
+        <title>Abhiram Shaji | Full Stack Developer Portfolio</title>
+        <meta
+          name="description"
+          content="Explore projects and professional work by Abhiram Shaji, a full stack developer based in Victoria, BC."
+        />
+        <meta property="og:title" content="Abhiram Shaji Portfolio" />
+        <meta
+          property="og:description"
+          content="Showcasing development projects and experience from Abhiram Shaji."
+        />
+        <meta property="og:image" content="/profile-img.jpg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

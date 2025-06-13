@@ -8,6 +8,7 @@ interface ProjectProps {
   title: string;
   description: string;
   logo: string;
+  alt?: string;
   linkText: string;
   link: string;
   github?: string;
@@ -17,6 +18,7 @@ export default function ProjectCard({
   title,
   description,
   logo,
+  alt,
   linkText,
   link,
   github,
@@ -26,7 +28,7 @@ export default function ProjectCard({
       {/* Full background image */}
       <Image
         src={logo}
-        alt={title}
+        alt={alt || title}
         fill
         className="object-cover group-hover:scale-105 transition-transform duration-500"
       />
