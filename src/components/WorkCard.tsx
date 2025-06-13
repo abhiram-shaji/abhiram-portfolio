@@ -43,8 +43,9 @@ export default function WorkCard({
   }
 
   return (
-    <div className="flex justify-between items-center rounded-lg border p-6 shadow-md bg-card text-card-foreground">
-      <div>
+    <div className="flex justify-between items-start sm:items-center rounded-lg border p-6 shadow-md bg-card text-card-foreground">
+      {/* Left Side: Text */}
+      <div className="text-left">
         <h3 className="text-xl font-semibold mb-1">{company}</h3>
         <p className="text-muted-foreground mb-4">{role}</p>
         {modalContent && (
@@ -57,7 +58,7 @@ export default function WorkCard({
         )}
       </div>
 
-      {/* Circular Logo */}
+      {/* Right Side: Logo */}
       <div className="w-16 h-16 ml-4 flex-shrink-0 relative rounded-full overflow-hidden border border-muted">
         <Image
           src={logo || ''}
