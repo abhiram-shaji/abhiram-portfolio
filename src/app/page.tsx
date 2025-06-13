@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Socials from '@/components/socials';
 import ProfileHeader from '@/components/ProfileHeader';
 import ProfileIntro from '@/components/ProfileIntro';
+import WorkCard from '@/components/WorkCard';
+import { works } from '@/data/workData';
 
 export default function Home() {
   return (
@@ -13,6 +15,16 @@ export default function Home() {
         <ProfileHeader />
         <ProfileIntro />
         <Socials />
+
+        {/* Professional Works */}
+        <div className="mt-10">
+          <h2 className="text-3xl font-bold tracking-tight mb-6">Professional Works</h2>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {works.map((work, index) => (
+              <WorkCard key={index} {...work} />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
