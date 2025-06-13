@@ -23,6 +23,7 @@ export default function ProjectCard({
 }: ProjectProps) {
   return (
     <div className="relative h-72 rounded-xl overflow-hidden shadow-lg group">
+      {/* Full background image */}
       <Image
         src={logo}
         alt={title}
@@ -30,6 +31,7 @@ export default function ProjectCard({
         className="object-cover group-hover:scale-105 transition-transform duration-500"
       />
 
+      {/* Overlay content */}
       <div className="absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-sm text-white p-4 z-10">
         <h2 className="text-lg font-semibold">{title}</h2>
         <p className="text-sm mb-3">{description}</p>
@@ -41,7 +43,11 @@ export default function ProjectCard({
           </Link>
           {github && (
             <Link href={github} target="_blank" rel="noreferrer">
-              <Button variant="ghost" size="sm">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="border border-white/30"
+              >
                 GitHub
               </Button>
             </Link>
