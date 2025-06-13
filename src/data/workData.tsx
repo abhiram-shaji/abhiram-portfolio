@@ -12,7 +12,7 @@ export interface WorkItem {
 export const works: WorkItem[] = [
   {
     company: 'Deloitte',
-    role: 'Frontend + Backend Developer',
+    role: 'Associate Analst',
     logo: '/deloitte.jpg',
     alt: 'Deloitte logo',
     modalContent: (
@@ -63,7 +63,7 @@ export const works: WorkItem[] = [
   },
   {
     company: 'Langroove',
-    role: 'Full Stack Developer',
+    role: 'Mobile Application Developer',
     logo: '/langroove.png',
     alt: 'Langroove logo',
     modalContent: (
