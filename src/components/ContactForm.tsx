@@ -1,14 +1,11 @@
 'use client';
 
-import { useState, useRef } from 'react';
-import ReCAPTCHA from '@/components/RecaptchaWrapper'; // Dynamic import
+import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 
 export default function ContactForm() {
-  const recaptchaRef = useRef<any>(null);
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,17 +22,11 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     if (formData.honeypot) return;
 
     setStatus('loading');
 
     try {
-      const recaptchaToken = await recaptchaRef.current?.executeAsync();
-      recaptchaRef.current?.reset();
-
-      if (!recaptchaToken) throw new Error('reCAPTCHA failed');
-
       const res = await fetch('https://formsubmit.co/ajax/write4abhiram@gmail.com', {
         method: 'POST',
         headers: {
@@ -46,7 +37,6 @@ export default function ContactForm() {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          'g-recaptcha-response': recaptchaToken,
         }),
       });
 
@@ -101,18 +91,12 @@ export default function ContactForm() {
         onChange={handleChange}
       />
 
-      <ReCAPTCHA
-        ref={recaptchaRef}
-        size="invisible"
-        sitekey="6Lcn-14rAAAAAOtNfXhvzx2cQWBMGOEUAUCRKx1X"
-      />
-
       <Button type="submit" className="w-full sm:w-fit" disabled={status === 'loading'}>
         {status === 'loading' ? 'Sending...' : 'Send Message'}
       </Button>
 
-      {status === 'success' && <p className="text-green-600">✅ Message sent successfully!</p>}
-      {status === 'error' && <p className="text-red-600">⚠️ Something went wrong. Try again.</p>}
+      {status === 'success' && <p className="text-green-600">Message sent successfully!</p>}
+      {status === 'error' && <p className="text-red-600">Something went wrong. Try again.</p>}
     </form>
   );
 }
