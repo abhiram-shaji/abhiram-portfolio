@@ -39,20 +39,21 @@ export default function Header() {
     <>
       {/* Floating top capsule nav (for md to xl) */}
       <header
-        className={`fixed top-0 left-0 w-full px-4 py-4 md:pt-15 flex items-center justify-between z-50 transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-full'
-          } 2xl:hidden`}
+        className={`fixed top-0 left-0 w-full px-4 py-4 md:pt-15 flex items-center justify-between z-50 transition-transform duration-300 ${
+          showHeader ? 'translate-y-0' : '-translate-y-full'
+        } 2xl:hidden`}
       >
-        {/* Centered floating pill navbar */}
         <nav className="hidden md:flex absolute inset-0 justify-center items-center pointer-events-none">
           <div className="bg-background border border-gray-200 rounded-full shadow-lg px-8 py-2 flex space-x-6 text-sm font-medium pointer-events-auto backdrop-blur-sm items-center">
             {menuItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className={`transition-colors ${pathname === item.href
-                  ? 'text-teal-600 font-semibold'
-                  : 'text-foreground hover:text-muted-foreground'
-                  }`}
+                className={`px-4 py-2 rounded-full transition-colors border ${
+                  pathname === item.href
+                    ? 'text-teal-600 border-teal-600 bg-background'
+                    : 'border-transparent text-foreground hover:text-muted-foreground'
+                }`}
               >
                 {item.label}
               </Link>
@@ -98,8 +99,9 @@ export default function Header() {
               key={item.label}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className={`hover:underline transition-colors ${pathname === item.href ? 'text-teal-600 font-semibold' : ''
-                }`}
+              className={`hover:underline transition-colors ${
+                pathname === item.href ? 'text-teal-600 font-semibold' : ''
+              }`}
               target={item.href.startsWith('http') ? '_blank' : undefined}
               rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
             >
@@ -118,10 +120,11 @@ export default function Header() {
             <Link
               key={item.label}
               href={item.href}
-              className={`transition-colors ${pathname === item.href
-                  ? 'text-teal-600 font-semibold'
-                  : 'text-foreground hover:text-muted-foreground'
-                }`}
+              className={`px-4 py-2 rounded-full transition-colors border ${
+                pathname === item.href
+                  ? 'text-teal-600 border-teal-600 bg-background'
+                  : 'border-transparent text-foreground hover:text-muted-foreground'
+              }`}
             >
               {item.label}
             </Link>
@@ -129,9 +132,6 @@ export default function Header() {
           <ThemeToggle />
         </div>
       </nav>
-
-
-
     </>
   );
 }
