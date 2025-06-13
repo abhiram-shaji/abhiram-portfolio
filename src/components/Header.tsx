@@ -24,21 +24,22 @@ export default function Header() {
       <header className="fixed top-0 left-0 w-full px-4 py-4 md:pt-15 flex items-center justify-between z-50 2xl:hidden">
         <nav className="hidden md:flex absolute inset-0 justify-center items-center pointer-events-none">
           <div className="relative bg-background border border-gray-200 rounded-full shadow-lg px-8 py-2 flex space-x-6 text-sm font-medium pointer-events-auto backdrop-blur-sm items-center">
-            {menuItems.map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <Link key={item.label} href={item.href} className="relative px-4 py-2 rounded-full">
-                  {isActive && <ActivePill />}
-                  <span
-                    className={`relative z-10 transition-colors ${
-                      isActive ? 'text-teal-600 font-semibold' : 'text-foreground'
-                    }`}
-                  >
-                    {item.label}
-                  </span>
-                </Link>
-              );
-            })}
+            {typeof window !== 'undefined' &&
+              menuItems.map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <Link key={item.label} href={item.href} className="relative px-4 py-2 rounded-full">
+                    {isActive && <ActivePill />}
+                    <span
+                      className={`relative z-10 transition-colors ${isActive ? 'text-teal-600 font-semibold' : 'text-foreground'
+                        }`}
+                    >
+                      {item.label}
+                    </span>
+                  </Link>
+                );
+              })}
+
             <ThemeToggle />
           </div>
         </nav>
@@ -80,9 +81,8 @@ export default function Header() {
               <Link key={item.label} href={item.href} onClick={() => setMenuOpen(false)} className="relative px-4 py-2 rounded-full">
                 {isActive && <ActivePill />}
                 <span
-                  className={`relative z-10 transition-colors ${
-                    isActive ? 'text-teal-600 font-semibold' : 'text-foreground'
-                  }`}
+                  className={`relative z-10 transition-colors ${isActive ? 'text-teal-600 font-semibold' : 'text-foreground'
+                    }`}
                 >
                   {item.label}
                 </span>
@@ -102,9 +102,8 @@ export default function Header() {
               <Link key={item.label} href={item.href} className="relative px-4 py-2 rounded-full">
                 {isActive && <ActivePill />}
                 <span
-                  className={`relative z-10 transition-colors ${
-                    isActive ? 'text-teal-600 font-semibold' : 'text-foreground'
-                  }`}
+                  className={`relative z-10 transition-colors ${isActive ? 'text-teal-600 font-semibold' : 'text-foreground'
+                    }`}
                 >
                   {item.label}
                 </span>
