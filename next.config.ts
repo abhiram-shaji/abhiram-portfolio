@@ -1,10 +1,12 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    domains: ['i.ibb.co'], // Add the domain hosting your image
+    domains: [
+      'i.ibb.co',
+      'cvwriterssociety.ca',
+      'images.moneycontrol.com'
+    ],
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
