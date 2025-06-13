@@ -6,7 +6,7 @@ export default function ProfileHeader() {
       {/* Profile Image */}
       <div className="w-40 h-40 relative rounded-full overflow-hidden border-4 border-muted shadow-lg group">
         <Image
-          src="https://i.ibb.co/LdGpSJ52/bio-img.jpg"
+          src="/profile-img.jpg"
           alt="Abhiram Shaji"
           fill
           className="object-cover transition duration-300 ease-in-out group-hover:grayscale"
