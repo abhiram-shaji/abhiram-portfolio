@@ -21,7 +21,7 @@ export default function ProfileHeader() {
       <div className="text-center sm:text-left">
         <h1 className="text-4xl font-bold tracking-tight">Abhiram Shaji</h1>
         <h2 className="text-lg text-muted-foreground font-medium mt-2">
-          Full Stack Developer • Designer • Creator
+          Full Stack Developer • Designer • Creator <br/> Exploring employment opportunities
         </h2>
 
         {/* Location */}
