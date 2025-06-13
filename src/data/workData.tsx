@@ -12,7 +12,7 @@ export interface WorkItem {
 export const works: WorkItem[] = [
   {
     company: 'Deloitte',
-    role: 'Associate Analst',
+    role: 'Associate Analyst',
     logo: '/deloitte.jpg',
     alt: 'Deloitte logo',
     modalContent: (
