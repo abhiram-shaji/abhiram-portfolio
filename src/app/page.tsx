@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import Head from 'next/head';
 import Socials from '@/components/socials';
 import ProfileHeader from '@/components/ProfileHeader';
