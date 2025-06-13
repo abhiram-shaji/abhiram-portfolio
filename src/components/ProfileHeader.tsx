@@ -1,4 +1,8 @@
+'use client';
+
 import Image from 'next/image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 export default function ProfileHeader() {
   return (
@@ -13,17 +17,25 @@ export default function ProfileHeader() {
         />
       </div>
 
-      {/* Name + Subtitle + Education */}
+      {/* Name + Subtitle + Details */}
       <div className="text-center sm:text-left">
         <h1 className="text-4xl font-bold tracking-tight">Abhiram Shaji</h1>
         <h2 className="text-lg text-muted-foreground font-medium mt-2">
           Full Stack Developer • Designer • Creator
         </h2>
 
+        {/* Location */}
+        <div className="flex items-center justify-center sm:justify-start mt-3 text-muted-foreground text-sm gap-2">
+          <FontAwesomeIcon icon={faMapMarkerAlt} className="text-base" />
+          <span>Victoria, BC, Canada</span>
+        </div>
+
         {/* Education */}
-        <div className="mt-3 text-muted-foreground text-sm leading-relaxed">
-          <p>Bachelor's in Computer Science</p>
-          <p>Post Graduate Diploma in Digital Design + Development</p>
+        <div className="flex items-start gap-2 mt-2 text-muted-foreground text-sm">
+          <div className="leading-relaxed">
+            <p>Bachelor's in Computer Science</p>
+            <p>Post Graduate Diploma in Digital Design + Development</p>
+          </div>
         </div>
       </div>
     </div>
