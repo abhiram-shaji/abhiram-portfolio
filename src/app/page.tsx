@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Head from 'next/head';
 import Socials from '@/components/socials';
 import ProfileHeader from '@/components/ProfileHeader';
 import ProfileIntro from '@/components/ProfileIntro';
@@ -9,8 +10,42 @@ import { works } from '@/data/workData';
 
 export default function Home() {
   return (
-    <section className="min-h-[90vh] flex items-center justify-center px-4 py-10 md:pt-20">
-      <div className="w-full max-w-5xl flex flex-col gap-10 text-center md:text-left">
+    <>
+      <Head>
+        <title>Abhiram Shaji | Full Stack Developer Portfolio</title>
+        <meta
+          name="description"
+          content="Explore projects and professional work by Abhiram Shaji, a full stack developer based in Victoria, BC."
+        />
+        <meta property="og:title" content="Abhiram Shaji Portfolio" />
+        <meta
+          property="og:description"
+          content="Showcasing development projects and experience from Abhiram Shaji."
+        />
+        <meta property="og:image" content="/profile-img.jpg" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Abhiram Shaji',
+              url: 'https://worksofabhiram.com',
+              sameAs: [
+                'https://www.linkedin.com/in/abhiram-kace/',
+                'https://github.com/abhiram-shaji',
+              ],
+              jobTitle: 'Full Stack Developer',
+              worksFor: {
+                '@type': 'Organization',
+                name: 'Freelance',
+              },
+            }),
+          }}
+        />
+      </Head>
+      <section className="min-h-[90vh] flex items-center justify-center px-4 py-10 md:pt-20">
+        <div className="w-full max-w-5xl flex flex-col gap-10 text-center md:text-left">
         {/* Header */}
         <ProfileHeader />
         <ProfileIntro />
@@ -30,5 +65,6 @@ export default function Home() {
         </div>
       </div>
     </section>
+    </>
   );
 }

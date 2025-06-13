@@ -10,6 +10,7 @@ interface WorkCardProps {
   company?: string;
   role?: string;
   logo?: string;
+  alt?: string;
   modalContent?: React.ReactNode;
   isCTA?: boolean;
 }
@@ -18,6 +19,7 @@ export default function WorkCard({
   company,
   role,
   logo,
+  alt,
   modalContent,
   isCTA = false,
 }: WorkCardProps) {
@@ -59,7 +61,7 @@ export default function WorkCard({
       <div className="w-16 h-16 ml-4 flex-shrink-0 relative rounded-full overflow-hidden border border-muted">
         <Image
           src={logo || ''}
-          alt={`${company} logo`}
+          alt={alt || `${company} logo`}
           fill
           className="object-cover"
         />
