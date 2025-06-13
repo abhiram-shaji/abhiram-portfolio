@@ -24,7 +24,7 @@ export const works: WorkItem[] = [
           I ensured best-in-class SEO, integrated Google Analytics for valuable traffic data, and implemented a CMS to simplify client workflows.
         </p>
         <p>
-          I'm also certified in social media marketing and used tools like Ocoya, Hootsuite, and PredisAI to boost visibility and engagement.
+          I&apos;m also certified in social media marketing and used tools like Ocoya, Hootsuite, and PredisAI to boost visibility and engagement.
         </p>
         <a
           href="https://www.linkedin.com/in/abhiram-kace/overlay/experience/2104080602/multiple-media-viewer/?profileId=ACoAACpIMvYBC8bbLb3t8Zx91NyKXw1kfG7t2k4&treasuryMediaId=1635513936154"

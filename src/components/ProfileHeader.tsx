@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default function ProfileHeader() {
   return (
@@ -33,7 +33,7 @@ export default function ProfileHeader() {
         {/* Education */}
         <div className="flex items-start gap-2 mt-2 text-muted-foreground text-sm">
           <div className="leading-relaxed">
-            <p>Bachelor's in Computer Science</p>
+            <p>Bachelor&apos;s in Computer Science</p>
             <p>Post Graduate Diploma in Digital Design + Development</p>
           </div>
         </div>
