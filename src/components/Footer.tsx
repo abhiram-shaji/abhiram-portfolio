@@ -5,7 +5,6 @@ import Modal from './Modal';
 
 const footerLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Github & Gists', href: 'https://github.com/yourusername' },
   { label: 'Projects', href: '/projects' },
   { label: 'Contact', href: '/contact' },
 ];
