@@ -6,16 +6,7 @@ export interface WorkItem {
 }
 
 export const works: WorkItem[] = [
-  {
-    company: 'Deloitte USI Consulting, Bangalore',
-    role: 'Software Engineer (Jan 2022 – Oct 2022)',
-    logo: '/deloitte.jpg',
-    onMoreInfo: () =>
-      alert(
-        `Developed internal dashboards and tooling using .NET, JavaScript, SQL, and modern front-end tech.\n\nResponsibilities:\n• Gathered requirements, participated in Agile ceremonies\n• Wrote production-ready code and handled deployments\n• Optimized front-end performance and contributed to scalable architecture\n\nTech Used: .NET, JavaScript, SQL, HTML5, CSS3, Git, JIRA, Confluence, Agile`
-      ),
-  },
-  {
+    {
     company: 'Figs Deli, Victoria BC',
     role: 'Contract Web Developer',
     logo: '/fig.png',
@@ -24,4 +15,13 @@ export const works: WorkItem[] = [
         `Built and maintained the official website and digital presence for Figs Deli.\n\nResponsibilities:\n• Developed responsive layouts and optimized loading speed\n• Maintained site updates and SEO adjustments\n\nTech Used: HTML5, CSS3, JavaScript, Next.js`
       ),
   },
+  {
+    company: 'Deloitte USI Consulting, Bangalore',
+    role: 'Software Engineer',
+    logo: '/deloitte.jpg',
+    onMoreInfo: () =>
+      alert(
+        `Developed internal dashboards and tooling using .NET, JavaScript, SQL, and modern front-end tech.\n\nResponsibilities:\n• Gathered requirements, participated in Agile ceremonies\n• Wrote production-ready code and handled deployments\n• Optimized front-end performance and contributed to scalable architecture\n\nTech Used: .NET, JavaScript, SQL, HTML5, CSS3, Git, JIRA, Confluence, Agile`
+      ),
+  }
 ];

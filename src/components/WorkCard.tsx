@@ -18,12 +18,14 @@ export default function WorkCard({ company, role, logo, onMoreInfo }: WorkCardPr
         <p className="text-muted-foreground mb-4">{role}</p>
         <Button onClick={onMoreInfo}>More Info</Button>
       </div>
-      <div className="w-16 h-16 ml-4 flex-shrink-0 relative">
+
+      {/* Circular Logo */}
+      <div className="w-16 h-16 ml-4 flex-shrink-0 relative rounded-full overflow-hidden border border-muted">
         <Image
           src={logo}
           alt={`${company} logo`}
           fill
-          className="object-contain"
+          className="object-cover"
         />
       </div>
     </div>
