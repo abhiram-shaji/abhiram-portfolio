@@ -6,7 +6,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ThemeToggle from './ThemeToggle';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const menuItems = [
   { label: 'Home', href: '/' },
@@ -49,15 +49,27 @@ export default function Header() {
               const isActive = pathname === item.href;
               return (
                 <Link key={item.label} href={item.href} className="relative group px-4 py-2 rounded-full">
-                  {isActive && (
-                    <motion.div
-                      layoutId="active-pill"
-                      className="absolute inset-0 rounded-full bg-teal-600/10 border border-teal-600"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
-                  )}
+                  <motion.div
+                    layoutId="active-pill"
+                    initial={false}
+                    animate={{
+                      scale: isActive ? 1.1 : 1,
+                      opacity: isActive ? 1 : 0,
+                      boxShadow: isActive
+                        ? '0 8px 32px rgba(13, 148, 136, 0.25)'
+                        : '0 0 0 rgba(0,0,0,0)',
+                    }}
+                    transition={{
+                      duration: 0.6,
+                      ease: 'easeInOut',
+                    }}
+                    className="absolute inset-0 rounded-full bg-teal-600/10 border border-teal-600"
+                  />
+
                   <span
-                    className={`relative z-10 transition-colors duration-300 ${isActive ? 'text-teal-600 font-semibold' : 'text-foreground group-hover:text-muted-foreground'
+                    className={`relative z-10 transition-colors duration-300 ${isActive
+                      ? 'text-teal-600 font-semibold'
+                      : 'text-foreground group-hover:text-muted-foreground'
                       }`}
                   >
                     {item.label}
@@ -122,15 +134,27 @@ export default function Header() {
             const isActive = pathname === item.href;
             return (
               <Link key={item.label} href={item.href} className="relative group px-4 py-2 rounded-full">
-                {isActive && (
-                  <motion.div
-                    layoutId="active-pill"
-                    className="absolute inset-0 rounded-full bg-teal-600/10 border border-teal-600"
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
+                <motion.div
+                  layoutId="active-pill"
+                  initial={false}
+                  animate={{
+                    scale: isActive ? 1.1 : 1,
+                    opacity: isActive ? 1 : 0,
+                    boxShadow: isActive
+                      ? '0 8px 32px rgba(13, 148, 136, 0.25)'
+                      : '0 0 0 rgba(0,0,0,0)',
+                  }}
+                  transition={{
+                    duration: 0.6,
+                    ease: 'easeInOut',
+                  }}
+                  className="absolute inset-0 rounded-full bg-teal-600/10 border border-teal-600"
+                />
+
                 <span
-                  className={`relative z-10 transition-colors duration-300 ${isActive ? 'text-teal-600 font-semibold' : 'text-foreground group-hover:text-muted-foreground'
+                  className={`relative z-10 transition-colors duration-300 ${isActive
+                    ? 'text-teal-600 font-semibold'
+                    : 'text-foreground group-hover:text-muted-foreground'
                     }`}
                 >
                   {item.label}
