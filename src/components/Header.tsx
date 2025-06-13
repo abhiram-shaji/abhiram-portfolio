@@ -50,7 +50,7 @@ export default function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-foreground p-3 border border-gray-300 rounded-full bg-white/70 backdrop-blur"
+              className="text-foreground p-3 border border-gray-300 rounded-full bg-teal-600/70 backdrop-blur"
               onClick={() => setMenuOpen(true)}
               aria-label="Open menu"
             >
@@ -67,7 +67,7 @@ export default function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-foreground p-3 ml-auto border border-gray-300 rounded-full bg-white/70 backdrop-blur"
+              className="text-foreground p-3 ml-auto border border-gray-300 rounded-full bg-teal-600/70 backdrop-blur"
               onClick={() => setMenuOpen(false)}
               aria-label="Close menu"
             >
