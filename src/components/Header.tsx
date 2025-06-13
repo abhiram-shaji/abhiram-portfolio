@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 const menuItems = [
   { label: 'Home', href: '/' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Gists', href: '/Gists' },
+  { label: 'Gists', href: '/gists' },
   { label: 'Contact', href: '/contact' },
 ];
 
