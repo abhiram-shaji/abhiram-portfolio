@@ -4,6 +4,7 @@ export const projects = [
     description:
       'A social language learning platform with real-time messaging and translation features.',
     logo: '/langroove-img.webp',
+    alt: 'Langroove app screenshot',
     linkText: 'GitHub',
     link: 'https://github.com/abhiram-shaji/Langroove',
   },
@@ -12,6 +13,7 @@ export const projects = [
     description:
       'A website for the North Island Writers Conference, featuring event registration and presenter details.',
     logo: '/conference-website-img.png',
+    alt: 'Conference website screenshot',
     linkText: 'Preview',
     link: 'https://cvwsconference.web.app/',
     github: 'https://github.com/abhiram-shaji/Conference-Website',
@@ -21,6 +23,7 @@ export const projects = [
     description:
       "A web app using Leaflet.js and NASA's NeoWs API to track Near-Earth Objects.",
     logo: '/asteroid-img.jpg',
+    alt: 'Asteroid tracker screenshot',
     linkText: 'Preview',
     link: 'https://abhiram-shaji.github.io/Asteroid-Tracker/',
     github: 'https://github.com/abhiram-shaji/Asteroid-Tracker',
@@ -30,6 +33,7 @@ export const projects = [
     description:
       'A mobile app for students with task management pomodoro timer and lofi music',
     logo: '/eirenesnc-img.jpg',
+    alt: 'Eirenesync app screenshot',
     linkText: 'GitHub',
     link: 'https://github.com/abhiram-shaji/EireneSync',
   },
@@ -38,6 +42,7 @@ export const projects = [
     description:
       'A visually appealing project built with Bootstrap, inspired by aurora borealis.',
     logo: '/northern-lights-img.png',
+    alt: 'Northern Lights design screenshot',
     linkText: 'Preview',
     link: 'https://abhiram-shaji.github.io/bootstrap_northern-lights/',
     github: 'https://github.com/abhiram-shaji/bootstrap_northern-lights',
@@ -46,6 +51,7 @@ export const projects = [
     title: 'Marine Awareness retreat',
     description: 'Marine awareness website build using html and css',
     logo: '/marine-awareness-img.png',
+    alt: 'Marine awareness retreat screenshot',
     linkText: 'Preview',
     link: 'https://abhiram-shaji.github.io/marine-awareness-retreat/',
   },
@@ -54,6 +60,7 @@ export const projects = [
     description:
       'A redisgn for original outback nursery website in comox valley',
     logo: '/outback-nursery-img.png',
+    alt: 'Outback Nursery website screenshot',
     linkText: 'Preview',
     link: 'https://abhiram-shaji.github.io/outback-nursery/',
     github: 'https://abhiram-shaji.github.io/outback-nursery/',
@@ -62,6 +69,7 @@ export const projects = [
     title: 'Langroove Landing Page',
     description: 'Landing page for langroove language learning app',
     logo: '/langroove-landing-page.png',
+    alt: 'Langroove landing page screenshot',
     linkText: 'Preview',
     link: 'https://langroove-webpage.vercel.app/',
   },
@@ -69,6 +77,7 @@ export const projects = [
     title: 'Tic Tac Toe app',
     description: 'Build using react',
     logo: '/tictactoe-img.jpg',
+    alt: 'Tic Tac Toe app screenshot',
     linkText: 'Preview',
     link: 'https://abhiram-shaji.github.io/tic-tac-toe-applied-javascript/',
     github: 'https://github.com/abhiram-shaji/bootstrap_northern-lights',
@@ -78,6 +87,7 @@ export const projects = [
     description:
       'An updated version of original Lars Tonroe norweign designer website',
     logo: '/lars-tonroe-img.png',
+    alt: 'Lars Tonroe website screenshot',
     linkText: 'Preview',
     link: 'https://abhiram-shaji.github.io/Lars-Tonroe-enhanced/',
     github: 'https://github.com/abhiram-shaji/bootstrap_northern-lights',
@@ -86,6 +96,7 @@ export const projects = [
     title: 'Earthquake visualisation app',
     description: 'Build using leaflet.js and public api',
     logo: '/earthquake-img.jpg',
+    alt: 'Earthquake app screenshot',
     linkText: 'Github',
     link: 'https://github.com/abhiram-shaji/earthquake-visualization',
   },
@@ -93,6 +104,7 @@ export const projects = [
     title: 'Portfolio SASS',
     description: 'Build using simple HTML and SASS',
     logo: '/sass-portfolio-img.png',
+    alt: 'SASS portfolio screenshot',
     linkText: 'Preview',
     link: 'https://abhiram-shaji.github.io/portfolio-scss-dark-old/',
     github: 'https://github.com/abhiram-shaji/bootstrap_northern-lights',
@@ -101,6 +113,7 @@ export const projects = [
     title: 'Bootstrap Portfolio',
     description: 'A well designed portfolio website made using bootstrap',
     logo: '/bootstrap-portfolio-img.png',
+    alt: 'Bootstrap portfolio screenshot',
     linkText: 'Preview',
     link: 'https://abhiram-shaji.github.io/Bootstrap_Portfolio-Current/',
     github: 'https://github.com/abhiram-shaji/bootstrap_northern-lights',
@@ -110,6 +123,7 @@ export const projects = [
     description:
       'A Bootstrap-based project with a creative design theme.',
     logo: '/llama-img.png',
+    alt: 'Llama bootstrap design screenshot',
     linkText: 'Preview',
     link: 'https://abhiram-shaji.github.io/Bootstrap_llama/',
   },
@@ -118,6 +132,7 @@ export const projects = [
     description:
       'A prototype of an inbox cleaner app designed to enhance email management and user experience by providing a clutter-free digital environment.',
     logo: '/nourish-inbox-img.png',
+    alt: 'Nourish Inbox UI screenshot',
     linkText: 'Preview',
     link: 'https://xd.adobe.com/view/219dc65c-d45d-4d6b-b64c-4c4049d7698a-74ce/grid/',
   },
@@ -126,6 +141,7 @@ export const projects = [
     description:
       'A professional profile card design that introduces Casper, the cat, in a manner as elegant and poised as his personality, providing a playful yet professional visual narrative',
     logo: '/pawprint-img.png',
+    alt: 'Professional pawprint design screenshot',
     linkText: 'Preview',
     link: 'https://xd.adobe.com/view/c7247965-6797-4725-b84b-4f91403ac375-9277/',
   },
@@ -134,6 +150,7 @@ export const projects = [
     description:
       'An artistic and literary project website featuring storytelling elements.',
     logo: '/aowf-img.png',
+    alt: 'The Arts of Whispering Fogs screenshot',
     linkText: 'Preview',
     link: 'https://abhiram-shaji.github.io/theartsofwhisperingfogs.github.io/',
     github: 'https://github.com/abhiram-shaji/theartsofwhisperingfogs.github.io',
@@ -142,6 +159,7 @@ export const projects = [
     title: 'Portfolio HTML CSS',
     description: 'Build using simple HTML and CSS',
     logo: '/html-css-portfolio-img.png',
+    alt: 'HTML CSS portfolio screenshot',
     linkText: 'Preview',
     link: 'https://abhiram-shaji.github.io/portofolio-old-scss/',
     github: 'https://github.com/abhiram-shaji/bootstrap_northern-lights',
