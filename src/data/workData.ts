@@ -16,6 +16,15 @@ export const works: WorkItem[] = [
       ),
   },
   {
+    company: 'Langroove',
+    role: 'Founder (Currently in closed testing)',
+    logo: '/langroove.png',
+    onMoreInfo: () =>
+      alert(
+        `Founder of Langroove, a social language learning platform with real-time messaging and translation features.\n\nStatus: Currently in closed testing phase.\n\nTech Used: React Native, Firebase, Google Translate API, Expo`
+      ),
+  },
+  {
     company: 'Deloitte USI Consulting, Bangalore',
     role: 'Software Engineer',
     logo: '/deloitte.jpg',
