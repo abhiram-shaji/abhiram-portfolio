@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ThemeToggle from './ThemeToggle';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const menuItems = [
   { label: 'Home', href: '/' },
@@ -37,27 +38,33 @@ export default function Header() {
 
   return (
     <>
-      {/* Floating top capsule nav (for md to xl) */}
+      {/* Top capsule nav for md-xl */}
       <header
-        className={`fixed top-0 left-0 w-full px-4 py-4 md:pt-15 flex items-center justify-between z-50 transition-transform duration-300 ${
-          showHeader ? 'translate-y-0' : '-translate-y-full'
-        } 2xl:hidden`}
+        className={`fixed top-0 left-0 w-full px-4 py-4 md:pt-15 flex items-center justify-between z-50 transition-transform duration-300 ${showHeader ? 'translate-y-0' : '-translate-y-full'
+          } 2xl:hidden`}
       >
         <nav className="hidden md:flex absolute inset-0 justify-center items-center pointer-events-none">
-          <div className="bg-background border border-gray-200 rounded-full shadow-lg px-8 py-2 flex space-x-6 text-sm font-medium pointer-events-auto backdrop-blur-sm items-center">
-            {menuItems.map((item) => (
-              <Link
-                key={item.label}
-                href={item.href}
-                className={`px-4 py-2 rounded-full transition-colors border ${
-                  pathname === item.href
-                    ? 'text-teal-600 border-teal-600 bg-background'
-                    : 'border-transparent text-foreground hover:text-muted-foreground'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+          <div className="relative bg-background border border-gray-200 rounded-full shadow-lg px-8 py-2 flex space-x-6 text-sm font-medium pointer-events-auto backdrop-blur-sm items-center">
+            {menuItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link key={item.label} href={item.href} className="relative group px-4 py-2 rounded-full">
+                  {isActive && (
+                    <motion.div
+                      layoutId="active-pill"
+                      className="absolute inset-0 rounded-full bg-teal-600/10 border border-teal-600"
+                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                  <span
+                    className={`relative z-10 transition-colors duration-300 ${isActive ? 'text-teal-600 font-semibold' : 'text-foreground group-hover:text-muted-foreground'
+                      }`}
+                  >
+                    {item.label}
+                  </span>
+                </Link>
+              );
+            })}
             <ThemeToggle />
           </div>
         </nav>
@@ -81,7 +88,6 @@ export default function Header() {
       {/* Fullscreen mobile nav */}
       {menuOpen && (
         <div className="fixed inset-0 z-[60] bg-background pt-20 flex flex-col items-center justify-center space-y-8 text-xl font-medium">
-          {/* Close button */}
           <div className="absolute top-4 right-4 z-[61]">
             <Button
               variant="ghost"
@@ -99,36 +105,39 @@ export default function Header() {
               key={item.label}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className={`hover:underline transition-colors ${
-                pathname === item.href ? 'text-teal-600 font-semibold' : ''
-              }`}
-              target={item.href.startsWith('http') ? '_blank' : undefined}
-              rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+              className={`hover:underline transition-colors ${pathname === item.href ? 'text-teal-600 font-semibold' : ''
+                }`}
             >
               {item.label}
             </Link>
           ))}
-
           <ThemeToggle />
         </div>
       )}
 
-      {/* Vertical capsule-style nav (2xl and up) */}
+      {/* Vertical capsule nav for 2xl+ */}
       <nav className="hidden 2xl:flex fixed top-1/2 left-[calc((100vw-80rem)/2-4rem)] -translate-y-1/2 z-50">
-        <div className="bg-background border border-gray-200 rounded-full shadow-lg px-6 py-16 flex flex-col space-y-8 text-sm font-medium pointer-events-auto backdrop-blur-sm items-center">
-          {menuItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className={`px-4 py-2 rounded-full transition-colors border ${
-                pathname === item.href
-                  ? 'text-teal-600 border-teal-600 bg-background'
-                  : 'border-transparent text-foreground hover:text-muted-foreground'
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
+        <div className="relative bg-background border border-gray-200 rounded-full shadow-lg px-6 py-16 flex flex-col space-y-8 text-sm font-medium pointer-events-auto backdrop-blur-sm items-center">
+          {menuItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link key={item.label} href={item.href} className="relative group px-4 py-2 rounded-full">
+                {isActive && (
+                  <motion.div
+                    layoutId="active-pill"
+                    className="absolute inset-0 rounded-full bg-teal-600/10 border border-teal-600"
+                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                  />
+                )}
+                <span
+                  className={`relative z-10 transition-colors duration-300 ${isActive ? 'text-teal-600 font-semibold' : 'text-foreground group-hover:text-muted-foreground'
+                    }`}
+                >
+                  {item.label}
+                </span>
+              </Link>
+            );
+          })}
           <ThemeToggle />
         </div>
       </nav>
