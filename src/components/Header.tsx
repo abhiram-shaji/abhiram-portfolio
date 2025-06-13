@@ -5,8 +5,8 @@ import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ThemeToggle from './ThemeToggle';
+import ActivePill from './ActivePill';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 const menuItems = [
   { label: 'Home', href: '/' },
@@ -28,13 +28,7 @@ export default function Header() {
               const isActive = pathname === item.href;
               return (
                 <Link key={item.label} href={item.href} className="relative px-4 py-2 rounded-full">
-                  {isActive && (
-                    <motion.div
-                      layoutId="active-pill"
-                      className="absolute inset-0 rounded-full bg-teal-600/10 border border-teal-600 shadow-[0_8px_24px_rgba(13,148,136,0.3)]"
-                      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                    />
-                  )}
+                  {isActive && <ActivePill />}
                   <span
                     className={`relative z-10 transition-colors ${
                       isActive ? 'text-teal-600 font-semibold' : 'text-foreground'
@@ -83,19 +77,8 @@ export default function Header() {
           {menuItems.map((item) => {
             const isActive = pathname === item.href;
             return (
-              <Link
-                key={item.label}
-                href={item.href}
-                onClick={() => setMenuOpen(false)}
-                className="relative px-4 py-2 rounded-full"
-              >
-                {isActive && (
-                  <motion.div
-                    layoutId="active-pill"
-                    className="absolute inset-0 rounded-full bg-teal-600/10 border border-teal-600 shadow-[0_8px_24px_rgba(13,148,136,0.3)]"
-                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                  />
-                )}
+              <Link key={item.label} href={item.href} onClick={() => setMenuOpen(false)} className="relative px-4 py-2 rounded-full">
+                {isActive && <ActivePill />}
                 <span
                   className={`relative z-10 transition-colors ${
                     isActive ? 'text-teal-600 font-semibold' : 'text-foreground'
@@ -117,13 +100,7 @@ export default function Header() {
             const isActive = pathname === item.href;
             return (
               <Link key={item.label} href={item.href} className="relative px-4 py-2 rounded-full">
-                {isActive && (
-                  <motion.div
-                    layoutId="active-pill"
-                    className="absolute inset-0 rounded-full bg-teal-600/10 border border-teal-600 shadow-[0_8px_24px_rgba(13,148,136,0.3)]"
-                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-                  />
-                )}
+                {isActive && <ActivePill />}
                 <span
                   className={`relative z-10 transition-colors ${
                     isActive ? 'text-teal-600 font-semibold' : 'text-foreground'
