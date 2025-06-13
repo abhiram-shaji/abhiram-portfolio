@@ -25,7 +25,7 @@ export const works: WorkItem[] = [
       ),
   },
   {
-    company: 'Deloitte USI Consulting, Bangalore',
+    company: 'Deloitte USI Consulting',
     role: 'Software Engineer',
     logo: '/deloitte.jpg',
     onMoreInfo: () =>
