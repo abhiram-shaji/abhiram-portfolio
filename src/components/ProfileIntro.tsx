@@ -3,12 +3,11 @@ export default function ProfileIntro() {
     <>
       {/* Core Paragraph */}
       <p className="text-left sm:text-lg text-muted-foreground leading-relaxed">
-        One of the very best developers in town if you could give me a chance to showcase it! What makes a good developer?
-        Someone who does exactly what it requires to solve the problem in the best possible way. I research and create the most efficient back end,
-        followed by the cleanest, not-cluttered, straight-to-the-point front end, fast, attention-grabbing, and conversion-focused.
-        I ensure best-in-class SEO, integrate Google Analytics for valuable traffic data, and implement a CMS to simplify client workflows.
-        I'm also certified in social media marketing and use tools like Ocoya, Hootsuite, and PredisAI to boost visibility and engagement.
-      </p>
+        What makes a good developer?
+        Someone who does exactly what it requires to solve the problem in the best possible way. Research goes into creating the most efficient back end, followed by the cleanest, uncluttered, straight to the point front end that is fast, attention grabbing, and conversion focused.
+        Best in class SEO is ensured, Google Analytics is integrated for valuable traffic insights, and a CMS is implemented to simplify client workflows.
+        Certified in social media marketing with tools like Ocoya, Hootsuite, and PredisAI used to boost visibility and engagement.
+        Highly skilled in Next.js, Node.js, React, React Native, Tailwind, Shadcn, and modern UI frameworks for building fast and scalable apps.</p>
 
       {/* Impact Stats */}
       <div className="grid gap-4 sm:grid-cols-2 w-full text-sm sm:text-base text-left text-muted-foreground">
