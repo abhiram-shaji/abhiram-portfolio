@@ -14,7 +14,7 @@ export const projects = [
       'A platform for mysterious articles and thought-provoking content built with Next.js, TypeScript, and Shadcn.',
     logo: '/deeplore-img.png',
     alt: 'DeepLore article screenshot',
-    linkText: 'GitHub',
+    linkText: 'Visit',
     link: 'https://www.deeplore.info/',
   },
   {
