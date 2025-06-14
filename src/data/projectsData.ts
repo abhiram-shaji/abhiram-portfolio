@@ -9,6 +9,35 @@ export const projects = [
     link: 'https://github.com/abhiram-shaji/Langroove',
   },
   {
+    title: 'DeepLore',
+    description:
+      'A platform for mysterious articles and thought-provoking content built with Next.js, TypeScript, and Shadcn.',
+    logo: '/deeplore-img.png',
+    alt: 'DeepLore article screenshot',
+    linkText: 'GitHub',
+    link: 'https://www.deeplore.info/',
+  },
+  {
+    title: 'Previous React Portfolio',
+    description:
+      'A portfolio website showcasing my previous work, built with JavaScript, React, and Material UI.',
+    logo: '/react-portfolio-img.png',
+    alt: 'React portfolio screenshot',
+    linkText: 'Preview',
+    link: 'https://abhiram-shaji.vercel.app/',
+  },
+  {
+    title: 'Fig Deli Website',
+    description:
+      'A website for Fig Deli located in Mackenzie Avenue, built with Next.js, TypeScript, and Tailwind CSS.',
+    logo: '/fig-deli-img.png',
+    alt: 'Fig Deli website screenshot',
+    linkText: 'Preview',
+    link: 'https://fig-deli-website.vercel.app/',
+    github: 'https://github.com/abhiram-shaji/fig-deli-website',
+  },
+
+  {
     title: 'Conference Website',
     description:
       'A website for the North Island Writers Conference, featuring event registration and presenter details.',
