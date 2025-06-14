@@ -26,7 +26,7 @@ export default function ProfileHeader() {
 
         {/* Location */}
         <div className="flex items-center justify-center sm:justify-start mt-3 text-muted-foreground text-sm gap-2">
-          <FontAwesomeIcon icon={faMapMarkerAlt} className="text-base" />
+          <FontAwesomeIcon icon={faMapMarkerAlt} className="text-sm w-4 h-4" fixedWidth />
           <span>Victoria, BC, Canada</span>
         </div>
 
