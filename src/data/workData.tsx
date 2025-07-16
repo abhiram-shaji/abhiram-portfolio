@@ -18,7 +18,7 @@ export const works: WorkItem[] = [
     modalContent: (
       <>
         <p>
-          Not officially launched — this is my personal mission to help as many small businesses in British Columbia as possible establish a digital presence. I focus on streamlined development, skipping the agencies and middlemen.
+          Not officially launched — this is my startup to help as many small businesses in British Columbia as possible establish a digital presence. I focus on streamlined development, skipping the agencies and middlemen.
         </p>
         <p>
           The stack includes Next.js, Shadcn for UI, SEO best practices, Google Analytics, and targeted Google Ads campaigns. A CMS and modular microservices ensure businesses survive and thrive in the digital age.
@@ -29,7 +29,7 @@ export const works: WorkItem[] = [
           rel="noopener noreferrer"
           className="text-primary underline"
         >
-          Visit Project
+          Visit Website
         </a>
       </>
     ),
