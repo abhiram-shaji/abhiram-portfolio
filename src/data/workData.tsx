@@ -11,6 +11,30 @@ export interface WorkItem {
 
 export const works: WorkItem[] = [
   {
+    company: 'The Digital Uplift',
+    role: 'Founder / Full Stack Developer',
+    logo: '/digital-uplift-logo.png',
+    alt: 'The Digital Uplift logo',
+    modalContent: (
+      <>
+        <p>
+          Not officially launched — this is my personal mission to help as many small businesses in British Columbia as possible establish a digital presence. I focus on streamlined development, skipping the agencies and middlemen.
+        </p>
+        <p>
+          The stack includes Next.js, Shadcn for UI, SEO best practices, Google Analytics, and targeted Google Ads campaigns. A CMS and modular microservices ensure businesses survive and thrive in the digital age.
+        </p>
+        <a
+          href="https://the-digital-uplift-18cxg1vk9-abhiram-shajis-projects.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary underline"
+        >
+          Visit Project
+        </a>
+      </>
+    ),
+  },
+  {
     company: 'Deloitte',
     role: 'Associate Analyst',
     logo: '/deloitte.jpg',
