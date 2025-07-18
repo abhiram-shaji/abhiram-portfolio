@@ -4,6 +4,8 @@ import Socials from '@/components/socials';
 import ContactHeader from '@/components/ContactHeader';
 import ContactForm from '@/components/ContactForm';
 import Head from 'next/head';
+import BookingModalTrigger from "@/components/ui/BookingModalTrigger";
+import BookingModal from "@/components/ui/BookingModal";
 
 export default function ContactPage() {
   return (
@@ -25,6 +27,19 @@ export default function ContactPage() {
       <div className="w-full max-w-3xl flex flex-col gap-10 text-center md:text-left">
         <ContactHeader />
         <ContactForm />
+
+<div>
+            <p className="text-base text-muted-foreground">
+        Prefer a quick meeting instead? Book a time that works for you:
+      </p>
+
+      <div className="mt-4">
+        <BookingModalTrigger />
+      </div>
+
+      <BookingModal />
+      </div>
+
         <div className="flex justify-center">
           <Socials />
         </div>
