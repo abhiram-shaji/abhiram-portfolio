@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Script from "next/script";
+import { BookingModalProvider } from "@/components/BookingModalContext"; // ✅ make sure this path is correct
 import "./globals.css";
 
 // Font setup
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        {/* Set dark mode on first paint */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(() => {
@@ -39,6 +41,7 @@ export default function RootLayout({
             })();`,
           }}
         />
+        
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-R858YCWC8P"
@@ -49,13 +52,16 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-R858YCWC8P');
           `}
         </Script>
-        <Header />
-        {children}
-        <Footer />
+
+        {/* ✅ Booking modal provider wraps the whole app */}
+        <BookingModalProvider>
+          <Header />
+          {children}
+          <Footer />
+        </BookingModalProvider>
       </body>
     </html>
   );
