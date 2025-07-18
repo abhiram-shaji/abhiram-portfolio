@@ -62,7 +62,7 @@ export default function ProfileIntro() {
   <div className="flex items-start gap-4">
     <BadgeCheck className="w-12 h-12 text-primary" />
     <div>
-      Expert in <strong>JavaScript, TypeScript, Node.js</strong>, with deep experience in <strong>Angular</strong> and modern web frameworks.
+      Expert in <strong>JavaScript, TypeScript, Node.js</strong>, with deep experience in <strong>AngularJS, Vue.js and Next.js</strong>
     </div>
   </div>
 
