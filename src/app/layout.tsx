@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Script from "next/script";
-import { BookingModalProvider } from "@/components/BookingModalContext"; // ✅ make sure this path is correct
+import { BookingModalProvider } from "@/components/ui/BookingModalContext"; // ✅ make sure this path is correct
 import "./globals.css";
 
 // Font setup
