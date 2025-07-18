@@ -18,13 +18,13 @@ export const works: WorkItem[] = [
     modalContent: (
       <>
         <p>
-          Not officially launched — this is my startup to help as many small businesses in British Columbia as possible establish a digital presence. I focus on streamlined development, skipping the agencies and middlemen.
+          Started as the project 100 to help as many small businesses in British Columbia as possible establish a digital presence. I focus on streamlined development, skipping the agencies and middlemen.
         </p>
         <p>
           The stack includes Next.js, Shadcn for UI, SEO best practices, Google Analytics, and targeted Google Ads campaigns. A CMS and modular microservices ensure businesses survive and thrive in the digital age.
         </p>
         <a
-          href="https://the-digital-uplift-18cxg1vk9-abhiram-shajis-projects.vercel.app/"
+          href="https://www.thedigitaluplift.ca"
           target="_blank"
           rel="noopener noreferrer"
           className="text-primary underline"
