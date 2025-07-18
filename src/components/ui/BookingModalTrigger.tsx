@@ -8,7 +8,7 @@ export default function BookingModalTrigger() {
 
   return (
     <Button onClick={() => setOpen(true)}>
-      Book Now
+      Book A Meeting
     </Button>
   );
 }

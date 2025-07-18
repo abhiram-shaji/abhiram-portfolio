@@ -1,3 +1,6 @@
+import BookingModalTrigger from "@/components/ui/BookingModalTrigger";
+import BookingModal from "@/components/ui/BookingModal";
+
 export default function ProfileIntro() {
   return (
     <>
@@ -7,10 +10,11 @@ export default function ProfileIntro() {
         Someone who does exactly what it requires to solve the problem in the best possible way. Research goes into creating the most efficient back end, followed by the cleanest, uncluttered, straight to the point front end that is fast, attention grabbing, and conversion focused.
         Best in class SEO is ensured, Google Analytics is integrated for valuable traffic insights, and a CMS is implemented to simplify client workflows.
         Certified in social media marketing with tools like Ocoya, Hootsuite, and PredisAI used to boost visibility and engagement.
-        Highly skilled in Next.js, Node.js, React, React Native, Tailwind, Shadcn, and modern UI frameworks for building fast and scalable apps.</p>
+        Highly skilled in Next.js, Node.js, React, React Native, Tailwind, Shadcn, and modern UI frameworks for building fast and scalable apps.
+      </p>
 
       {/* Impact Stats */}
-      <div className="grid gap-4 sm:grid-cols-2 w-full text-sm sm:text-base text-left text-muted-foreground">
+      <div className="grid gap-4 sm:grid-cols-2 w-full text-sm sm:text-base text-left text-muted-foreground mt-6">
         <p>
           A full website redesign can boost traffic by up to <strong>300%</strong> in just four months and lift conversion rates by as much as <strong>200%</strong>.
         </p>
@@ -24,6 +28,14 @@ export default function ProfileIntro() {
           Businesses that invest in social media marketing typically see <strong>24%</strong> revenue growth on average compared to those that don’t.
         </p>
       </div>
+
+      {/* Booking Modal Trigger */}
+      <div className="mt-6">
+        <BookingModalTrigger />
+      </div>
+
+      {/* Booking Modal */}
+      <BookingModal />
     </>
   );
 }
