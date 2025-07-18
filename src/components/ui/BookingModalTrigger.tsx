@@ -7,7 +7,7 @@ export default function BookingModalTrigger() {
   const { setOpen } = useBookingModal();
 
   return (
-    <Button onClick={() => setOpen(true)}>
+    <Button variant="destructive" onClick={() => setOpen(true)}>
       Book A Meeting
     </Button>
   );

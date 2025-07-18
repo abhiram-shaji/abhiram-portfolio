@@ -14,7 +14,7 @@ export default function ProfileIntro() {
       </p>
 
       {/* Impact Stats */}
-      <div className="grid gap-4 sm:grid-cols-2 w-full text-sm sm:text-base text-left text-muted-foreground mt-6">
+      <div className="grid gap-4 sm:grid-cols-2 w-full text-sm sm:text-base text-left text-muted-foreground">
         <p>
           A full website redesign can boost traffic by up to <strong>300%</strong> in just four months and lift conversion rates by as much as <strong>200%</strong>.
         </p>
