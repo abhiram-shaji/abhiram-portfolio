@@ -3,7 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Script from "next/script";
-import { BookingModalProvider } from "@/components/ui/BookingModalContext"; // ✅ make sure this path is correct
+import { BookingModalProvider } from "@/components/ui/BookingModalContext";
+import Analytics from "@/components/Analytics"; // 👈 Import Analytics tracker
 import "./globals.css";
 
 // Font setup
@@ -29,6 +30,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Google Analytics Scripts */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-R858YCWC8P"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-R858YCWC8P', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* Set dark mode on first paint */}
         <script
@@ -41,24 +59,11 @@ export default function RootLayout({
             })();`,
           }}
         />
-        
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-R858YCWC8P"
-          strategy="afterInteractive"
-        />
-        <Script id="ga-init" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-R858YCWC8P');
-          `}
-        </Script>
 
-        {/* ✅ Booking modal provider wraps the whole app */}
+        {/* Booking modal provider wraps the whole app */}
         <BookingModalProvider>
           <Header />
+          <Analytics /> {/* 👈 Track route changes */}
           {children}
           <Footer />
         </BookingModalProvider>
