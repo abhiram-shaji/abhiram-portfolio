@@ -50,7 +50,7 @@ export default function BookingModal() {
                   <span className="font-semibold">Phone Call</span>
                 </div>
                 <p className="text-muted-foreground text-sm">
-                  We`&apos;`ll give you a call at your preferred time.
+                  We&apos;ll give you a call at your preferred time.
                 </p>
               </div>
             </div>
