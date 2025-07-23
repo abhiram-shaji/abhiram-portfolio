@@ -112,16 +112,6 @@ export const projects = [
     github: 'https://github.com/abhiram-shaji/bootstrap_northern-lights',
   },
   {
-    title: 'Lars Tonroe Enhanced',
-    description:
-      'An updated version of original Lars Tonroe norweign designer website',
-    logo: '/lars-tonroe-img.png',
-    alt: 'Lars Tonroe website screenshot',
-    linkText: 'Preview',
-    link: 'https://abhiram-shaji.github.io/Lars-Tonroe-enhanced/',
-    github: 'https://github.com/abhiram-shaji/bootstrap_northern-lights',
-  },
-  {
     title: 'Earthquake visualisation app',
     description: 'Build using leaflet.js and public api',
     logo: '/earthquake-img.jpg',
@@ -173,6 +163,16 @@ export const projects = [
     alt: 'Professional pawprint design screenshot',
     linkText: 'Preview',
     link: 'https://xd.adobe.com/view/c7247965-6797-4725-b84b-4f91403ac375-9277/',
+  },
+  {
+    title: 'Lars Tonroe Enhanced',
+    description:
+      'An updated version of original Lars Tonroe norweign designer website',
+    logo: '/lars-tonroe-img.png',
+    alt: 'Lars Tonroe website screenshot',
+    linkText: 'Preview',
+    link: 'https://abhiram-shaji.github.io/Lars-Tonroe-enhanced/',
+    github: 'https://github.com/abhiram-shaji/bootstrap_northern-lights',
   },
   {
     title: 'The Arts of Whispering Fogs',
