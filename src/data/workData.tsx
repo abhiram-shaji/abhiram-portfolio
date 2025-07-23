@@ -62,30 +62,6 @@ export const works: WorkItem[] = [
     ),
   },
   {
-    company: 'Figs Deli',
-    role: 'Freelance Web Developer',
-    logo: '/fig.png',
-    alt: 'Figs Deli logo',
-    modalContent: (
-      <>
-        <p>
-          I created a sleek Next.js website with a clean UI, SEO optimization, and Google Analytics integration.
-        </p>
-        <p>
-          The site will be deployed to their custom domain soon.
-        </p>
-        <a
-          href="https://fig-deli-website.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary underline"
-        >
-          Preview Website
-        </a>
-      </>
-    ),
-  },
-  {
     company: 'Langroove',
     role: 'Mobile Application Developer',
     logo: '/langroove.png',
