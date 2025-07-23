@@ -38,16 +38,6 @@ export const projects = [
   },
 
   {
-    title: 'Conference Website',
-    description:
-      'A website for the North Island Writers Conference, featuring event registration and presenter details.',
-    logo: '/conference-website-img.png',
-    alt: 'Conference website screenshot',
-    linkText: 'Preview',
-    link: 'https://cvwsconference.web.app/',
-    github: 'https://github.com/abhiram-shaji/Conference-Website',
-  },
-  {
     title: 'Asteroid Tracker',
     description:
       "A web app using Leaflet.js and NASA's NeoWs API to track Near-Earth Objects.",
@@ -163,6 +153,17 @@ export const projects = [
     alt: 'Professional pawprint design screenshot',
     linkText: 'Preview',
     link: 'https://xd.adobe.com/view/c7247965-6797-4725-b84b-4f91403ac375-9277/',
+  },
+  
+  {
+    title: 'Conference Website',
+    description:
+      'A website for the North Island Writers Conference, featuring event registration and presenter details.',
+    logo: '/conference-website-img.png',
+    alt: 'Conference website screenshot',
+    linkText: 'Preview',
+    link: 'https://cvwsconference.web.app/',
+    github: 'https://github.com/abhiram-shaji/Conference-Website',
   },
   {
     title: 'Lars Tonroe Enhanced',
