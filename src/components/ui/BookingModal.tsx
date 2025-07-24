@@ -64,7 +64,7 @@ export default function BookingModal() {
             </DialogHeader>
             <div className="bg-white dark:bg-white rounded-md shadow-md ring-1 ring-gray-300">
               <iframe
-                src="https://calendar.app.google/8K3DK5XKHTbJgvhX7"
+                src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ02_ebShxKQJwUmd1d_V5pd1oBZxfhQJ3yRq32IVx2mR5PIcSCGcAUwwUuwfxb-bBGtHp0HbcaK"
                 className="w-full h-[600px] border rounded-md"
                 loading="lazy"
               ></iframe>
