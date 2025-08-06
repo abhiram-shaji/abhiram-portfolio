@@ -8,7 +8,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function WorksSection() {
     return (
-        <section className="py-16 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto">
+        <section className="mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-10 text-center">
                 Professional Works / Production Level Code
             </h2>
