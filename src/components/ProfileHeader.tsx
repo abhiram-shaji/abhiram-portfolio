@@ -1,8 +1,5 @@
-'use client';
-
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { MapPin } from 'lucide-react';
 
 export default function ProfileHeader() {
   return (
@@ -21,12 +18,13 @@ export default function ProfileHeader() {
       <div className="text-center sm:text-left">
         <h1 className="text-4xl font-bold tracking-tight">Abhiram Shaji</h1>
         <h2 className="text-lg text-muted-foreground font-medium mt-2">
-          Full Stack Developer • Designer • Creator <br/> Exploring employment opportunities
+          Full Stack Developer • Designer • Creator <br />
+          Exploring employment opportunities
         </h2>
 
         {/* Location */}
         <div className="flex items-center justify-center sm:justify-start mt-3 text-muted-foreground text-sm gap-2">
-          <FontAwesomeIcon icon={faMapMarkerAlt} className="text-sm w-4 h-4" fixedWidth />
+          <MapPin className="w-4 h-4" strokeWidth={2} />
           <span>Victoria, BC, Canada</span>
         </div>
 
