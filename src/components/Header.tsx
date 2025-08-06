@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ThemeToggle from './ThemeToggle';
-import ActivePill from './ActivePill';
 import Link from 'next/link';
 
 const menuItems = [
@@ -24,22 +23,23 @@ export default function Header() {
       <header className="fixed top-0 left-0 w-full px-4 py-4 md:pt-15 flex items-center justify-between z-50 2xl:hidden">
         <nav className="hidden md:flex absolute inset-0 justify-center items-center pointer-events-none">
           <div className="relative bg-background border border-gray-200 rounded-full shadow-lg px-8 py-2 flex space-x-6 text-sm font-medium pointer-events-auto backdrop-blur-sm items-center">
-            {typeof window !== 'undefined' &&
-              menuItems.map((item) => {
-                const isActive = pathname === item.href;
-                return (
-                  <Link key={item.label} href={item.href} className="relative px-4 py-2 rounded-full">
-                    {isActive && <ActivePill />}
-                    <span
-                      className={`relative z-10 transition-colors ${isActive ? 'text-teal-600 font-semibold' : 'text-foreground'
-                        }`}
-                    >
-                      {item.label}
-                    </span>
-                  </Link>
-                );
-              })}
-
+            {menuItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className={`relative px-4 py-2 rounded-full transition-colors duration-300 ${
+                    isActive ? 'font-semibold text-teal-600' : 'text-foreground'
+                  }`}
+                >
+                  {isActive && (
+                    <span className="absolute inset-0 rounded-full bg-teal-600/20 -z-10 transition-all duration-300" />
+                  )}
+                  <span className="relative z-10">{item.label}</span>
+                </Link>
+              );
+            })}
             <ThemeToggle />
           </div>
         </nav>
@@ -78,14 +78,18 @@ export default function Header() {
           {menuItems.map((item) => {
             const isActive = pathname === item.href;
             return (
-              <Link key={item.label} href={item.href} onClick={() => setMenuOpen(false)} className="relative px-4 py-2 rounded-full">
-                {isActive && <ActivePill />}
-                <span
-                  className={`relative z-10 transition-colors ${isActive ? 'text-teal-600 font-semibold' : 'text-foreground'
-                    }`}
-                >
-                  {item.label}
-                </span>
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className={`relative px-4 py-2 rounded-full transition-colors duration-300 ${
+                  isActive ? 'font-semibold text-teal-600' : 'text-foreground'
+                }`}
+              >
+                {isActive && (
+                  <span className="absolute inset-0 rounded-full bg-teal-600/20 -z-10 transition-all duration-300" />
+                )}
+                <span className="relative z-10">{item.label}</span>
               </Link>
             );
           })}
@@ -99,14 +103,17 @@ export default function Header() {
           {menuItems.map((item) => {
             const isActive = pathname === item.href;
             return (
-              <Link key={item.label} href={item.href} className="relative px-4 py-2 rounded-full">
-                {isActive && <ActivePill />}
-                <span
-                  className={`relative z-10 transition-colors ${isActive ? 'text-teal-600 font-semibold' : 'text-foreground'
-                    }`}
-                >
-                  {item.label}
-                </span>
+              <Link
+                key={item.label}
+                href={item.href}
+                className={`relative px-4 py-2 rounded-full transition-colors duration-300 ${
+                  isActive ? 'font-semibold text-teal-600' : 'text-foreground'
+                }`}
+              >
+                {isActive && (
+                  <span className="absolute inset-0 rounded-full bg-teal-600/20 -z-10 transition-all duration-300" />
+                )}
+                <span className="relative z-10">{item.label}</span>
               </Link>
             );
           })}
