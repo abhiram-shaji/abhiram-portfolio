@@ -10,8 +10,8 @@ import Link from 'next/link';
 
 const menuItems = [
   { label: 'Home', href: '/' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Projects', href: '/abhiram-shaji-portfolio-projects-showcase' },
+  { label: 'Contact', href: '/contact-abhiram-shaji' },
 ];
 
 export default function Header() {
