@@ -1,5 +1,3 @@
-// No 'use client'
-
 export const dynamic = 'force-static';
 
 import Socials from '@/components/socials';

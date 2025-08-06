@@ -4,8 +4,6 @@ export const dynamic = 'force-static'; // ✅ ensures static generation
 import Socials from '@/components/socials';
 import ContactHeader from '@/components/ContactHeader';
 import ContactForm from '@/components/ContactForm';
-import BookingModalTrigger from '@/components/ui/BookingModalTrigger';
-import BookingModal from '@/components/ui/BookingModal';
 
 export const metadata = {
   title: 'Contact Abhiram Shaji',
@@ -27,14 +25,8 @@ export default function ContactPage() {
 
         <div>
           <p className="text-base text-muted-foreground">
-            Prefer a quick meeting instead? Book a time that works for you:
+            Prefer a quick meeting instead? <a href="mailto:write4abhiram@gmail.com" className="underline">Send an email</a>.
           </p>
-
-          <div className="mt-4">
-            <BookingModalTrigger />
-          </div>
-
-          <BookingModal />
         </div>
 
         <div className="flex justify-center">

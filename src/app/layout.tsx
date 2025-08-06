@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Script from "next/script";
-import { BookingModalProvider } from "@/components/ui/BookingModalContext";
-import Analytics from "@/components/Analytics"; // 👈 Import Analytics tracker
 import "./globals.css";
 
 // Font setup
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -59,14 +58,9 @@ export default function RootLayout({
             })();`,
           }}
         />
-
-        {/* Booking modal provider wraps the whole app */}
-        <BookingModalProvider>
-          <Header />
-          <Analytics /> {/* 👈 Track route changes */}
-          {children}
-          <Footer />
-        </BookingModalProvider>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );
