@@ -38,8 +38,8 @@ export const metadata: Metadata = {
 
 export default function TermsOfUsePage() {
   return (
-    <main className="px-4 md:px-8 lg:px-16 py-16 max-w-4xl mx-auto">
-      <Card className="bg-card text-foreground shadow-md">
+    <main className="min-h-[90vh] flex items-center justify-center px-4 py-10 md:pt-20">
+      <Card className="w-full max-w-5xl flex flex-col gap-10 text-center md:text-left">
         <CardHeader>
           <CardTitle className="text-3xl font-bold">Terms and Conditions of Use</CardTitle>
           <Separator className="my-4" />
