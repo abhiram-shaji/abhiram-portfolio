@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -16,11 +15,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Abhiram's Portfolio",
-  description: "Crafted with Next.js, Tailwind, and ShadCN",
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,9 +22,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>{/* Removed Google Analytics scripts */}</head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* Set dark mode on first paint */}
+      <head />
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
         <script
           dangerouslySetInnerHTML={{
             __html: `(() => {
@@ -44,7 +37,7 @@ export default function RootLayout({
 
         <BookingModalProvider>
           <Header />
-          {children}
+          <main className="flex-grow">{children}</main>
           <Footer />
         </BookingModalProvider>
       </body>
