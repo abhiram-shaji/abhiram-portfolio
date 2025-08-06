@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import BookingModalTrigger from "@/components/ui/BookingModalTrigger";
 import BookingModal from "@/components/ui/BookingModal";
 import {

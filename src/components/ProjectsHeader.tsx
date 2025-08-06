@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 export default function ProjectsHeader() {
   return (
     <div className="mb-12 text-center">

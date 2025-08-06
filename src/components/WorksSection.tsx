@@ -1,3 +1,5 @@
+export const dynamic = 'force-static';
+
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
