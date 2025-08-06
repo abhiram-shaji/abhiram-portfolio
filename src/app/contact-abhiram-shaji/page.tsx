@@ -1,16 +1,14 @@
-// app/contact/page.tsx
-export const dynamic = 'force-static'; // ✅ ensures static generation
+export const dynamic = 'force-static';
 
-import { Mail, Coffee, Video, Calendar, Linkedin } from 'lucide-react';
+import { Mail, Coffee, Calendar, Linkedin } from 'lucide-react';
 import ContactHeader from '@/components/ContactHeader';
 import BookingModalTrigger from '@/components/ui/BookingModalTrigger';
 import BookingModal from '@/components/ui/BookingModal';
-import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const metadata = {
   title: 'Contact Abhiram Shaji',
-  description:
-    'Reach out to Abhiram Shaji for project inquiries or collaboration opportunities.',
+  description: 'Reach out to Abhiram Shaji for project inquiries or collaboration opportunities.',
   openGraph: {
     title: 'Contact Abhiram Shaji',
     description: 'Get in touch with Abhiram Shaji via the contact options provided.',
@@ -21,62 +19,72 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <section className="min-h-[90vh] flex items-center justify-center px-4 py-10 md:pt-20">
-      <div className="w-full max-w-3xl flex flex-col gap-10 text-center md:text-left">
+      <div className="w-full max-w-4xl flex flex-col gap-10 text-left">
         <ContactHeader />
 
-        <div className="space-y-6 text-muted-foreground text-base">
-          <div className="flex items-start gap-4">
-            <Mail className="text-primary" />
-            <div>
-              <p className="font-medium text-foreground">Email</p>
-              <a href="mailto:abhiramshaji.work@gmail.com" className="underline">
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Email */}
+          <Card>
+            <CardHeader className="flex items-center gap-2 text-left">
+              <Mail className="text-primary" />
+              <CardTitle>Email</CardTitle>
+            </CardHeader>
+            <CardContent className="text-left">
+              <a
+                href="mailto:abhiramshaji.work@gmail.com"
+                className="underline text-lg text-muted-foreground"
+              >
                 abhiramshaji.work@gmail.com
               </a>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
 
-          <div className="flex items-start gap-4">
-            <Linkedin className="text-primary" />
-            <div>
-              <p className="font-medium text-foreground">LinkedIn</p>
+          {/* LinkedIn */}
+          <Card>
+            <CardHeader className="flex items-center gap-2 text-left">
+              <Linkedin className="text-primary" />
+              <CardTitle>LinkedIn</CardTitle>
+            </CardHeader>
+            <CardContent className="text-left">
               <a
                 href="https://www.linkedin.com/in/abhiram-kace"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline"
+                className="underline text-lg text-muted-foreground"
               >
                 linkedin.com/in/abhiram-kace
               </a>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
 
-          <div className="flex items-start gap-4">
-            <Coffee className="text-primary" />
-            <div>
-              <p className="font-medium text-foreground">Preferred Meeting</p>
-              <p>
-                I love in-person meetings over a coffee - casual and real. Online video
-                calls are welcome too, but let’s meet in person if possible.
+          {/* Meeting Preference */}
+          <Card className="md:col-span-2">
+            <CardHeader className="flex items-center gap-2 text-left">
+              <Coffee className="text-primary" />
+              <CardTitle>Preferred Meeting</CardTitle>
+            </CardHeader>
+            <CardContent className="text-left">
+              <p className="text-sm text-muted-foreground">
+                I prefer meeting in person over a coffee, nothing beats real human connection.
+                However, I’m always open to online video conferences too if that’s more convenient for you.
               </p>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
 
-          <div className="flex items-start gap-4">
-            <Calendar className="text-primary" />
-            <div>
-              <p className="font-medium text-foreground">Book a Meeting</p>
-              <p>Choose a time that works best for you:</p>
-              <div className="mt-2">
-                <BookingModalTrigger asChild>
-                  <Button variant="default">
-                    <Calendar className="mr-2 h-4 w-4" />
-                    Book Now
-                  </Button>
-                </BookingModalTrigger>
-              </div>
+          {/* Booking Modal */}
+          <Card className="md:col-span-2">
+            <CardHeader className="flex items-center gap-2 text-left">
+              <Calendar className="text-primary" />
+              <CardTitle>Book a Meeting</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4 text-left">
+              <p className="text-sm text-muted-foreground">
+                Use the button below to choose a time that works best for you.
+              </p>
+              <BookingModalTrigger />
               <BookingModal />
-            </div>
-          </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
