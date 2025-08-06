@@ -36,17 +36,13 @@ export const worksData: WorkItem[] = [
     alt: "Deloitte logo",
     content: (
       <p>
-        I researched and created the most efficient back end, followed by the cleanest,
-        not-cluttered, straight-to-the-point front end - fast, attention-grabbing, and
-        conversion-focused. I ensured best-in-class SEO, integrated Google Analytics for valuable
-        traffic data, and implemented a CMS to simplify client workflows. I&apos;m also certified
-        in social media marketing and used tools like Ocoya, Hootsuite, and PredisAI to boost
-        visibility and engagement.
+        At Deloitte, I engineered lean backend and paired it with a fast, conversion-driven frontend - clear, responsive, and built to perform. I handled SEO strategy, integrated Google Analytics for actionable insights, and deployed a CMS to streamline client updates. I also brought certified social media marketing expertise to the table, using Ocoya, Hootsuite, and PredisAI to drive engagement and visibility across channels.
       </p>
     ),
     link: "https://www.linkedin.com/in/abhiram-kace/overlay/experience/2104080602/multiple-media-viewer/?profileId=ACoAACpIMvYBC8bbLb3t8Zx91NyKXw1kfG7t2k4&treasuryMediaId=1635513936154",
     linkText: "View Experience Letter (LinkedIn login required)",
   },
+
   {
     company: "Langroove",
     role: "Mobile Application Developer",
