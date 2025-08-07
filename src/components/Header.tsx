@@ -30,17 +30,13 @@ export default function Header() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className={`group relative px-4 py-2 rounded-full transition-colors duration-300 ${
-                    isActive
-                      ? 'font-semibold text-white'
-                      : 'text-gray-800 dark:text-white group-hover:text-white'
-                  }`}
+                  className={`group relative px-4 py-2 rounded-full transition-colors duration-300 text-gray-800 dark:text-white group-hover:text-white`}
                 >
                   <span
                     className={`absolute inset-0 rounded-full -z-10 transition-all duration-300 ${
                       isActive
-                        ? 'bg-teal-600 opacity-100 scale-100'
-                        : 'bg-teal-600 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
+                        ? 'bg-teal-600/50 opacity-100 scale-100'
+                        : 'bg-teal-600/50 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
                     }`}
                   />
                   <span className="relative z-10">{item.label}</span>
@@ -89,17 +85,13 @@ export default function Header() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className={`group relative px-4 py-2 rounded-full transition-colors duration-300 ${
-                  isActive
-                    ? 'font-semibold text-white'
-                    : 'text-gray-800 dark:text-white group-hover:text-white'
-                }`}
+                className={`group relative px-4 py-2 rounded-full transition-colors duration-300 text-gray-800 dark:text-white group-hover:text-white`}
               >
                 <span
                   className={`absolute inset-0 rounded-full -z-10 transition-all duration-300 ${
                     isActive
-                      ? 'bg-teal-600 opacity-100 scale-100'
-                      : 'bg-teal-600 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
+                      ? 'bg-teal-600/50 opacity-100 scale-100'
+                      : 'bg-teal-600/50 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
                   }`}
                 />
                 <span className="relative z-10">{item.label}</span>
@@ -119,17 +111,13 @@ export default function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className={`group relative px-4 py-2 rounded-full transition-colors duration-300 ${
-                  isActive
-                    ? 'font-semibold text-white'
-                    : 'text-gray-800 dark:text-white group-hover:text-white'
-                }`}
+                className={`group relative px-4 py-2 rounded-full transition-colors duration-300 text-gray-800 dark:text-white group-hover:text-white`}
               >
                 <span
                   className={`absolute inset-0 rounded-full -z-10 transition-all duration-300 ${
                     isActive
-                      ? 'bg-teal-600 opacity-100 scale-100'
-                      : 'bg-teal-600 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
+                      ? 'bg-teal-600/50 opacity-100 scale-100'
+                      : 'bg-teal-600/50 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
                   }`}
                 />
                 <span className="relative z-10">{item.label}</span>
