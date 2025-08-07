@@ -23,7 +23,7 @@ export default function Header() {
       {/* Top capsule nav for md-xl */}
       <header className="fixed top-0 left-0 w-full px-4 py-4 md:pt-15 flex items-center justify-between z-50 2xl:hidden">
         <nav className="hidden md:flex absolute inset-0 justify-center items-center pointer-events-none">
-          <div className="relative bg-white/90 dark:bg-black/50 border border-gray-200 rounded-full shadow-lg px-8 py-2 flex space-x-6 text-sm font-medium pointer-events-auto backdrop-blur-sm items-center">
+          <div className="relative bg-white/90 dark:bg-black/50 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg px-8 py-2 flex space-x-6 text-sm font-medium pointer-events-auto backdrop-blur-sm items-center">
             {menuItems.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -32,15 +32,15 @@ export default function Header() {
                   href={item.href}
                   className={`group relative px-4 py-2 rounded-full transition-colors duration-300 ${
                     isActive
-                      ? 'font-semibold text-teal-600'
-                      : 'text-gray-800 dark:text-white'
+                      ? 'font-semibold text-white'
+                      : 'text-gray-800 dark:text-white group-hover:text-white'
                   }`}
                 >
                   <span
                     className={`absolute inset-0 rounded-full -z-10 transition-all duration-300 ${
                       isActive
-                        ? 'bg-teal-600/30 opacity-100 scale-100'
-                        : 'bg-teal-600/30 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
+                        ? 'bg-teal-600 opacity-100 scale-100'
+                        : 'bg-teal-600 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
                     }`}
                   />
                   <span className="relative z-10">{item.label}</span>
@@ -57,7 +57,7 @@ export default function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-gray-800 dark:text-white p-3 border border-gray-300 rounded-full bg-teal-600/80 backdrop-blur"
+              className="text-white p-3 border border-gray-300 dark:border-gray-700 rounded-full bg-teal-600 backdrop-blur"
               onClick={() => setMenuOpen(true)}
               aria-label="Open menu"
             >
@@ -74,7 +74,7 @@ export default function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-gray-800 dark:text-white p-3 ml-auto border border-gray-300 rounded-full bg-teal-600/80 backdrop-blur"
+              className="text-white p-3 ml-auto border border-gray-300 dark:border-gray-700 rounded-full bg-teal-600 backdrop-blur"
               onClick={() => setMenuOpen(false)}
               aria-label="Close menu"
             >
@@ -91,15 +91,15 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className={`group relative px-4 py-2 rounded-full transition-colors duration-300 ${
                   isActive
-                    ? 'font-semibold text-teal-600'
-                    : 'text-gray-800 dark:text-white'
+                    ? 'font-semibold text-white'
+                    : 'text-gray-800 dark:text-white group-hover:text-white'
                 }`}
               >
                 <span
                   className={`absolute inset-0 rounded-full -z-10 transition-all duration-300 ${
                     isActive
-                      ? 'bg-teal-600/30 opacity-100 scale-100'
-                      : 'bg-teal-600/30 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
+                      ? 'bg-teal-600 opacity-100 scale-100'
+                      : 'bg-teal-600 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
                   }`}
                 />
                 <span className="relative z-10">{item.label}</span>
@@ -112,7 +112,7 @@ export default function Header() {
 
       {/* Vertical capsule nav for 2xl+ */}
       <nav className="hidden 2xl:flex fixed top-1/2 left-[calc((100vw-80rem)/2-4rem)] -translate-y-1/2 z-50">
-        <div className="relative bg-white/90 dark:bg-black/50 border border-gray-200 rounded-full shadow-lg px-6 py-16 flex flex-col space-y-8 text-sm font-medium pointer-events-auto backdrop-blur-sm items-center">
+        <div className="relative bg-white/90 dark:bg-black/50 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg px-6 py-16 flex flex-col space-y-8 text-sm font-medium pointer-events-auto backdrop-blur-sm items-center">
           {menuItems.map((item) => {
             const isActive = pathname === item.href;
             return (
@@ -121,15 +121,15 @@ export default function Header() {
                 href={item.href}
                 className={`group relative px-4 py-2 rounded-full transition-colors duration-300 ${
                   isActive
-                    ? 'font-semibold text-teal-600'
-                    : 'text-gray-800 dark:text-white'
+                    ? 'font-semibold text-white'
+                    : 'text-gray-800 dark:text-white group-hover:text-white'
                 }`}
               >
                 <span
                   className={`absolute inset-0 rounded-full -z-10 transition-all duration-300 ${
                     isActive
-                      ? 'bg-teal-600/30 opacity-100 scale-100'
-                      : 'bg-teal-600/30 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
+                      ? 'bg-teal-600 opacity-100 scale-100'
+                      : 'bg-teal-600 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
                   }`}
                 />
                 <span className="relative z-10">{item.label}</span>
