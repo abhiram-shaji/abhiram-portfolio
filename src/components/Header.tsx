@@ -23,7 +23,7 @@ export default function Header() {
       {/* Top capsule nav for md-xl */}
       <header className="fixed top-0 left-0 w-full px-4 py-4 md:pt-15 flex items-center justify-between z-50 2xl:hidden">
         <nav className="hidden md:flex absolute inset-0 justify-center items-center pointer-events-none">
-          <div className="relative bg-white/90 dark:bg-black/50 border border-gray-200 dark:border-gray-700 rounded-full shadow-lg px-8 py-2 flex space-x-6 text-sm font-medium pointer-events-auto backdrop-blur-sm items-center">
+          <div className="relative bg-white/90 dark:bg-black/50 border border-teal-600 dark:border-gray-700 rounded-full shadow-lg px-8 py-2 flex space-x-6 text-sm font-medium pointer-events-auto backdrop-blur-sm items-center">
             {menuItems.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -68,7 +68,7 @@ export default function Header() {
           <div className="absolute top-4 right-4 z-[61]">
             <Button
               variant="ghost"
-              className="col ml-auto border border-gray-300 text-red-600 dark:border-gray-700 rounded-full backdrop-blur flex items-center justify-center h-12 w-12 p-0"
+              className="col ml-auto border border-gray-300 text-red-600 dark:border-teal-600 rounded-full backdrop-blur flex items-center justify-center h-12 w-12 p-0"
               onClick={() => setMenuOpen(false)}
               aria-label="Close menu"
             >
