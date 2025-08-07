@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { BookingModalProvider } from "@/components/ui/BookingModalContext";
+import Script from "next/script";
 import "./globals.css";
 
 // Font setup
@@ -22,7 +23,25 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head />
+      <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-R858YCWC8P"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-R858YCWC8P');
+            `,
+          }}
+        />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
         <script
           dangerouslySetInnerHTML={{
@@ -34,7 +53,6 @@ export default function RootLayout({
             })();`,
           }}
         />
-
         <BookingModalProvider>
           <Header />
           <main className="flex-grow">{children}</main>
