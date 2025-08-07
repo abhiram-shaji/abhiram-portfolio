@@ -34,7 +34,7 @@ export default function ContactPage() {
                 href="mailto:abhiramshaji.work@gmail.com"
                 className="underline text-lg text-muted-foreground"
               >
-                abhiramshaji.work@gmail.com
+                write4abhiram@gmail.com
               </a>
             </CardContent>
           </Card>
