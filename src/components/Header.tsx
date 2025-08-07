@@ -33,11 +33,10 @@ export default function Header() {
                   className={`group relative px-4 py-2 rounded-full transition-colors duration-300 text-gray-800 dark:text-white group-hover:text-white`}
                 >
                   <span
-                    className={`absolute inset-0 rounded-full -z-10 transition-all duration-300 ${
-                      isActive
-                        ? 'bg-teal-600/50 opacity-100 scale-100'
-                        : 'bg-teal-600/50 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
-                    }`}
+                    className={`absolute inset-0 rounded-full -z-10 transition-all duration-300 ${isActive
+                      ? 'bg-teal-600/50 opacity-100 scale-100'
+                      : 'bg-teal-600/50 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
+                      }`}
                   />
                   <span className="relative z-10">{item.label}</span>
                 </Link>
@@ -53,7 +52,7 @@ export default function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="text-white p-3 border border-gray-300 dark:border-gray-700 rounded-full bg-teal-600 backdrop-blur"
+              className="ml-auto bg-teal-600 text-white border border-gray-300 dark:border-gray-700 rounded-full backdrop-blur flex items-center justify-center h-12 w-12 p-0"
               onClick={() => setMenuOpen(true)}
               aria-label="Open menu"
             >
@@ -69,13 +68,13 @@ export default function Header() {
           <div className="absolute top-4 right-4 z-[61]">
             <Button
               variant="ghost"
-              size="icon"
-              className="text-white p-3 ml-auto border border-gray-300 dark:border-gray-700 rounded-full bg-teal-600 backdrop-blur"
+              className="col ml-auto border border-gray-300 text-red-600 dark:border-gray-700 rounded-full backdrop-blur flex items-center justify-center h-12 w-12 p-0"
               onClick={() => setMenuOpen(false)}
               aria-label="Close menu"
             >
-              <X size={32} />
+              <X size={48}/>
             </Button>
+
           </div>
 
           {menuItems.map((item) => {
@@ -88,11 +87,10 @@ export default function Header() {
                 className={`group relative px-4 py-2 rounded-full transition-colors duration-300 text-gray-800 dark:text-white group-hover:text-white`}
               >
                 <span
-                  className={`absolute inset-0 rounded-full -z-10 transition-all duration-300 ${
-                    isActive
-                      ? 'bg-teal-600/50 opacity-100 scale-100'
-                      : 'bg-teal-600/50 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
-                  }`}
+                  className={`absolute inset-0 rounded-full -z-10 transition-all duration-300 ${isActive
+                    ? 'bg-teal-600/50 opacity-100 scale-100'
+                    : 'bg-teal-600/50 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
+                    }`}
                 />
                 <span className="relative z-10">{item.label}</span>
               </Link>
@@ -114,11 +112,10 @@ export default function Header() {
                 className={`group relative px-4 py-2 rounded-full transition-colors duration-300 text-gray-800 dark:text-white group-hover:text-white`}
               >
                 <span
-                  className={`absolute inset-0 rounded-full -z-10 transition-all duration-300 ${
-                    isActive
-                      ? 'bg-teal-600/50 opacity-100 scale-100'
-                      : 'bg-teal-600/50 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
-                  }`}
+                  className={`absolute inset-0 rounded-full -z-10 transition-all duration-300 ${isActive
+                    ? 'bg-teal-600/50 opacity-100 scale-100'
+                    : 'bg-teal-600/50 opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100'
+                    }`}
                 />
                 <span className="relative z-10">{item.label}</span>
               </Link>
