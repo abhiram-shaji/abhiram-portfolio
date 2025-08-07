@@ -11,6 +11,7 @@ const menuItems = [
   { label: 'Home', href: '/' },
   { label: 'Projects', href: '/abhiram-shaji-portfolio-projects-showcase' },
   { label: 'Contact', href: '/contact-abhiram-shaji' },
+  { label: 'Resume', href: '/resume-abhiram-shaji' },
 ];
 
 export default function Header() {

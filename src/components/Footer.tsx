@@ -9,6 +9,7 @@ import {
   BookOpenCheck,
   Accessibility,
   Cookie,
+  IdCard,
   MapPin,
 } from 'lucide-react';
 
@@ -29,6 +30,11 @@ const footerLinks = [
     label: 'Contact',
     href: '/contact-abhiram-shaji',
     icon: <Mail className="w-4 h-4 mr-1 inline-block" />,
+  },
+  {
+    label: 'Resume',
+    href: '/resume-abhiram-shaji',
+    icon: <IdCard className="w-4 h-4 mr-1 inline-block" />,
   },
   {
     label: 'Helpful Resources',
