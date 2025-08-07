@@ -131,7 +131,7 @@ export default function CookiePolicyPage() {
               <p>
                 If you have any questions about this Cookie Policy, you can contact me at:
                 <br />
-                <strong>Email:</strong> [write4abhiram@gmail.com]
+                <strong>Email:</strong> write4abhiram@gmail.com
                 <br />
                 <strong>Location:</strong> Victoria, BC, Canada
               </p>

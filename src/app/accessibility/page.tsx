@@ -99,7 +99,7 @@ export default function AccessibilityPage() {
                 support by email or video call.
               </p>
               <p className="mt-4">
-                <strong>Email:</strong> [write4abhiram@gmail.com]
+                <strong>Email:</strong> write4abhiram@gmail.com
                 <br />
                 <strong>Location:</strong> Victoria, BC, Canada
                 <br />
