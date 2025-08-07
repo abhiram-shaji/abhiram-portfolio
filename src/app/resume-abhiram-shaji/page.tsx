@@ -1,17 +1,18 @@
 // app/resume-abhiram-shaji/page.tsx
 import { Metadata } from 'next';
+import { Button } from "@/components/ui/button";
 import {
   Briefcase,
   GraduationCap,
   Hammer,
   BookOpen,
   User,
+  Download,
 } from 'lucide-react';
 
 import {
   Card,
   CardContent,
-  CardHeader,
   CardTitle,
 } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
@@ -54,6 +55,21 @@ export default function ResumePage() {
   return (
     <section className="min-h-[90vh] flex items-center justify-center px-4 py-10 md:pt-20">
       <div className="w-full max-w-5xl space-y-10 text-left">
+
+        {/* Download Resume Button */}
+        <div className="flex justify-center">
+          <a
+            href="https://drive.google.com/file/d/14qhnVTui4Ox_uUzKiqb2HDHayFchbGiY/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="destructive">
+              <Download className="w-4 h-4 mr-2" />
+              Download Resume
+            </Button>
+          </a>
+        </div>
+
         <Card>
           <CardContent className="p-6 space-y-10 text-muted-foreground">
             {/* Name & Title */}
