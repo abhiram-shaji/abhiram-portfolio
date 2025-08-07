@@ -2,7 +2,7 @@
 
 export const dynamic = 'force-static';
 
-import Socials from '@/components/socials';
+import ShareButtons from '@/components/ShareButtons';
 import ProfileHeader from '@/components/ProfileHeader';
 import ProfileIntro from '@/components/ProfileIntro';
 import WorksSection from '@/components/WorksSection';
@@ -42,7 +42,7 @@ export default function Home() {
       <div className="w-full max-w-5xl flex flex-col gap-10 text-center md:text-left">
         <ProfileHeader />
         <ProfileIntro />
-        <Socials />
+        <ShareButtons />
 
         <WorksSection />
       </div>

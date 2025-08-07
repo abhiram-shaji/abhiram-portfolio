@@ -24,6 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/digital-uplift-logo.png"
+        />
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-R858YCWC8P"

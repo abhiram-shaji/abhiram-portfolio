@@ -20,7 +20,7 @@ const socials = {
   learn: 'https://learndigital.dev/students/abhiram-shaji/',
 };
 
-export default function Socials() {
+export default function ShareButtons() {
   return (
     <div className="w-full flex justify-center md:justify-start mt-4 gap-6">
       <a href={socials.github} target="_blank" rel="noreferrer">

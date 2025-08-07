@@ -16,12 +16,10 @@ import {
 export default function ProfileIntro() {
   return (
     <>
-{/* Core Paragraph */}
-<p className="text-center sm:text-left sm:text-lg text-muted-foreground leading-relaxed">
-  What defines a great full stack developer? It is about solving real problems with the right balance of performance, design, and scalability. I build high performing web and mobile applications with efficient back end systems and clean, conversion focused front end interfaces. My work consistently achieves a perfect score of 100 in SEO, Best Practices, and Accessibility on Lighthouse. This reflects a strong commitment to quality, speed, and delivering an outstanding user experience.
-</p>
-
-
+      {/* Core Paragraph */}
+      <p className="text-center sm:text-left sm:text-lg text-muted-foreground leading-relaxed">
+        What defines a great full stack developer? It is about solving real problems with the right balance of performance, design, and scalability. I build high performing web and mobile applications with efficient back end systems and clean, conversion focused front end interfaces. My work consistently achieves a perfect score of 100 in SEO, Best Practices, and Accessibility on Lighthouse. This reflects a strong commitment to quality, speed, and delivering an outstanding user experience.
+      </p>
 
 
       {/* Expertise Snapshot */}
@@ -82,6 +80,8 @@ export default function ProfileIntro() {
           </div>
         </div>
       </div>
+
+      
 
       {/* Booking Modal Trigger */}
       <div className="mt-6">
