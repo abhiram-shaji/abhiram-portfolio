@@ -2,6 +2,8 @@
 import { Metadata } from 'next';
 import { Globe } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import BookingModal from '@/components/ui/BookingModal';
+import BookingModalTrigger from '@/components/ui/BookingModalTrigger';
 
 export const dynamic = 'force-static';
 
@@ -77,6 +79,10 @@ export default function FreelanceWebDevPage() {
               responsive design. If you’re looking for someone local to BC who understands the needs
               of businesses here and can deliver without the fluff, I’m the developer to call.
             </p>
+            <div className="text-center md:text-left mt-6">
+                                  <BookingModalTrigger />
+                                  <BookingModal />
+                                </div>
           </CardContent>
         </Card>
       </div>

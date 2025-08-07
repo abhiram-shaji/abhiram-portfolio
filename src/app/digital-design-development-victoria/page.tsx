@@ -2,6 +2,8 @@
 import { Metadata } from 'next';
 import { LayoutDashboard } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import BookingModal from '@/components/ui/BookingModal';
+import BookingModalTrigger from '@/components/ui/BookingModalTrigger';
 
 export const dynamic = 'force-static';
 
@@ -76,6 +78,10 @@ export default function DigitalDesignVictoriaPage() {
               I also offer Google Ads and analytics integration to help you monitor performance and
               grow your online reach.
             </p>
+            <div className="text-center md:text-left mt-6">
+                                  <BookingModalTrigger />
+                                  <BookingModal />
+                                </div>
           </CardContent>
         </Card>
       </div>

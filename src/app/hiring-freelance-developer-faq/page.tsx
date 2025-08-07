@@ -2,6 +2,8 @@
 import { Metadata } from 'next';
 import { HelpCircle } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import BookingModal from '@/components/ui/BookingModal';
+import BookingModalTrigger from '@/components/ui/BookingModalTrigger';
 
 export const dynamic = 'force-static';
 
@@ -96,6 +98,10 @@ export default function FAQPage() {
                 I offer project-based and hourly pricing with transparent scopes and deliverables.
               </p>
             </div>
+            <div className="text-center md:text-left mt-6">
+                                  <BookingModalTrigger />
+                                  <BookingModal />
+                                </div>
           </CardContent>
         </Card>
       </div>

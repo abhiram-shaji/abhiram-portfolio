@@ -2,6 +2,8 @@
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import BookingModal from '@/components/ui/BookingModal';
+import BookingModalTrigger from '@/components/ui/BookingModalTrigger';
 
 export const dynamic = 'force-static';
 
@@ -111,6 +113,10 @@ export default function LocationsServedPage() {
                 a barrier to building great digital experiences.
               </p>
             </div>
+            <div className="text-center md:text-left mt-6">
+                                  <BookingModalTrigger />
+                                  <BookingModal />
+                                </div>
           </CardContent>
         </Card>
       </div>

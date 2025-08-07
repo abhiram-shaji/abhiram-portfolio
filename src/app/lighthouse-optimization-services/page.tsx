@@ -2,6 +2,8 @@
 import { Metadata } from 'next';
 import { BarChart3 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import BookingModal from '@/components/ui/BookingModal';
+import BookingModalTrigger from '@/components/ui/BookingModalTrigger';
 
 export const dynamic = 'force-static';
 
@@ -73,6 +75,10 @@ export default function LighthouseOptimizationPage() {
               These changes not only help with technical SEO but also enhance the user experience,
               leading to higher engagement and better retention.
             </p>
+            <div className="text-center md:text-left mt-6">
+                                  <BookingModalTrigger />
+                                  <BookingModal />
+                                </div>
           </CardContent>
         </Card>
       </div>

@@ -2,6 +2,8 @@
 import { Metadata } from 'next';
 import { ServerCog } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import BookingModal from '@/components/ui/BookingModal';
+import BookingModalTrigger from '@/components/ui/BookingModalTrigger';
 
 export const dynamic = 'force-static';
 
@@ -77,6 +79,10 @@ export default function TrustedReactNodePage() {
               My focus on performance and SEO helps ensure that your users, and search engines to
               get the best possible experience.
             </p>
+            <div className="text-center md:text-left mt-6">
+                                  <BookingModalTrigger />
+                                  <BookingModal />
+                                </div>
           </CardContent>
         </Card>
       </div>

@@ -2,6 +2,8 @@
 import { Metadata } from 'next';
 import { Code2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import BookingModal from '@/components/ui/BookingModal';
+import BookingModalTrigger from '@/components/ui/BookingModalTrigger';
 
 export const dynamic = 'force-static';
 
@@ -79,6 +81,10 @@ export default function HirePage() {
               professional who values user experience, long-term maintainability, and measurable
               business results.
             </p>
+            <div className="text-center md:text-left mt-6">
+                                  <BookingModalTrigger />
+                                  <BookingModal />
+                                </div>
           </CardContent>
         </Card>
       </div>

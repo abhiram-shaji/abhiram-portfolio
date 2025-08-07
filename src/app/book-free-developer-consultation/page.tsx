@@ -2,6 +2,7 @@
 import { Metadata } from 'next';
 import { CalendarCheck2 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import BookingModal from '@/components/ui/BookingModal';
 import BookingModalTrigger from '@/components/ui/BookingModalTrigger';
 
 export const dynamic = 'force-static';
@@ -78,6 +79,7 @@ export default function BookConsultationPage() {
         {/* Optional CTA Button (use only if you already have the modal or booking link set up) */}
         <div className="text-center md:text-left">
           <BookingModalTrigger />
+          <BookingModal />
         </div>
       </div>
     </section>
