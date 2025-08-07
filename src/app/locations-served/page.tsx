@@ -109,7 +109,7 @@ export default function LocationsServedPage() {
               </p>
               <p className="mt-2">
                 If you are in North America and need a reliable full stack developer who understands
-                design, user experience, and business needs — let us work together. Location is never
+                design, user experience, and business needs, let us work together. Location is never
                 a barrier to building great digital experiences.
               </p>
             </div>
