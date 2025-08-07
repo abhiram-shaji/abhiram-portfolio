@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://worksofabhiram.com/sitemap.xml
