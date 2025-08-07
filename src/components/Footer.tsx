@@ -1,6 +1,16 @@
 // components/Footer.tsx
 import Link from 'next/link';
-import { Home, FolderKanban, Mail, FileText, ShieldCheck, BookOpenCheck } from 'lucide-react';
+import {
+  Home,
+  FolderKanban,
+  Mail,
+  FileText,
+  ShieldCheck,
+  BookOpenCheck,
+  Accessibility,
+  Cookie,
+  MapPin,
+} from 'lucide-react';
 
 export const dynamic = 'force-static';
 
@@ -21,6 +31,26 @@ const footerLinks = [
     icon: <Mail className="w-4 h-4 mr-1 inline-block" />,
   },
   {
+    label: 'Helpful Resources',
+    href: '/helpful-resources',
+    icon: <BookOpenCheck className="w-4 h-4 mr-1 inline-block" />,
+  },
+  {
+    label: 'Accessibility',
+    href: '/accessibility',
+    icon: <Accessibility className="w-4 h-4 mr-1 inline-block" />,
+  },
+  {
+    label: 'Cookie Policy',
+    href: '/cookie-policy',
+    icon: <Cookie className="w-4 h-4 mr-1 inline-block" />,
+  },
+  {
+    label: 'Locations Served',
+    href: '/locations-served',
+    icon: <MapPin className="w-4 h-4 mr-1 inline-block" />,
+  },
+  {
     label: 'Terms of Service',
     href: '/abhiram-shaji-portfolio-website-terms-and-conditions-of-use',
     icon: <FileText className="w-4 h-4 mr-1 inline-block" />,
@@ -29,11 +59,6 @@ const footerLinks = [
     label: 'Privacy Policy',
     href: '/abhiram-shaji-portfolio-website-privacy-policy-and-data-protection',
     icon: <ShieldCheck className="w-4 h-4 mr-1 inline-block" />,
-  },
-  {
-    label: 'Helpful Resources',
-    href: '/helpful-resources',
-    icon: <BookOpenCheck className="w-4 h-4 mr-1 inline-block" />,
   },
 ];
 
