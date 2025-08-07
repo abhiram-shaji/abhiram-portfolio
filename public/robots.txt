@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://worksofabhiram.com
+
+# Sitemaps
+Sitemap: https://worksofabhiram.com/sitemap.xml
