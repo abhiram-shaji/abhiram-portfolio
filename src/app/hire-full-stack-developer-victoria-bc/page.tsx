@@ -64,7 +64,7 @@ export default function HirePage() {
               Node.js, Express, and TypeScript.
             </p>
             <p className="mb-4">
-              Whether you're a startup, enterprise, or local business, I provide end-to-end
+              Whether you&apos;re a startup, enterprise, or local business, I provide end-to-end
               development services, from planning and UI design to backend APIs, database
               optimization, testing, and deployment.
             </p>
@@ -77,7 +77,7 @@ export default function HirePage() {
               performance, best practices, and accessibility.
             </p>
             <p>
-              When you work with me, you're not just hiring a coder, you're partnering with a
+              When you work with me, you&apos;re not just hiring a coder, you&apos;re partnering with a
               professional who values user experience, long-term maintainability, and measurable
               business results.
             </p>

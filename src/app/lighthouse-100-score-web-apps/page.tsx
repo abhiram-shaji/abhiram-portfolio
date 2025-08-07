@@ -59,7 +59,7 @@ export default function LighthouseScorePage() {
         <Card className="bg-muted/50 border shadow-md">
           <CardContent className="p-6 text-lg leading-relaxed text-muted-foreground">
             <p className="mb-4">
-              Building web apps that pass industry benchmarks isn’t just a goal, it's a standard
+              Building web apps that pass industry benchmarks isn&apos;t just a goal, it&apos;s a standard
               for me.
             </p>
             <p className="mb-4">

@@ -1,7 +1,7 @@
 // app/locations-served/page.tsx
 import { Metadata } from 'next';
 import { MapPin } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent} from '@/components/ui/card';
 import BookingModal from '@/components/ui/BookingModal';
 import BookingModalTrigger from '@/components/ui/BookingModalTrigger';
 

@@ -1,7 +1,7 @@
 // app/cookie-policy/page.tsx
 import { Metadata } from 'next';
 import { Cookie } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent} from '@/components/ui/card';
 
 export const dynamic = 'force-static';
 
