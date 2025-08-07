@@ -40,7 +40,7 @@ export const worksData: WorkItem[] = [
       </p>
     ),
     link: "https://www.linkedin.com/in/abhiram-kace/overlay/experience/2104080602/multiple-media-viewer/?profileId=ACoAACpIMvYBC8bbLb3t8Zx91NyKXw1kfG7t2k4&treasuryMediaId=1635513936154",
-    linkText: "View My Deloitte Experience Letter (LinkedIn login required)",
+    linkText: "View Experience Letter",
   },
 
   {
