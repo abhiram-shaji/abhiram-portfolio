@@ -56,20 +56,6 @@ export default function ResumePage() {
     <section className="min-h-[90vh] flex items-center justify-center px-4 py-10 md:pt-20">
       <div className="w-full max-w-5xl space-y-10 text-left">
 
-        {/* Download Resume Button */}
-        <div className="flex justify-center">
-          <a
-            href="https://drive.google.com/file/d/14qhnVTui4Ox_uUzKiqb2HDHayFchbGiY/view"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button variant="destructive">
-              <Download className="w-4 h-4 mr-2" />
-              Download Resume
-            </Button>
-          </a>
-        </div>
-
         <Card>
           <CardContent className="p-6 space-y-10 text-muted-foreground">
             {/* Name & Title */}
@@ -217,6 +203,19 @@ export default function ResumePage() {
             </div>
           </CardContent>
         </Card>
+                {/* Download Resume Button */}
+        <div className="flex justify-center">
+          <a
+            href="https://drive.google.com/file/d/14qhnVTui4Ox_uUzKiqb2HDHayFchbGiY/view"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button variant="destructive">
+              <Download className="w-4 h-4 mr-2" />
+              Download Resume
+            </Button>
+          </a>
+        </div>
       </div>
     </section>
   );
