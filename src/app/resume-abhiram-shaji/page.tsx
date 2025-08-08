@@ -123,49 +123,52 @@ export default function ResumePage() {
 
             <Separator />
 
-            {/* Experience */}
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <Hammer className="w-5 h-5 text-primary" />
-                <CardTitle>Work Experience</CardTitle>
-              </div>
-              <div className="space-y-4">
-                {resumeData.experience.map((exp, index) => (
-                  <div key={index}>
-                    <p className="font-semibold text-foreground">{exp.title}</p>
-                    <p className="text-sm italic">
-                      {exp.location} - {exp.period}
-                    </p>
-                    <ul className="list-disc list-inside text-sm space-y-1 mt-1">
-                      {exp.points.map((point, idx) => (
-                        <li key={idx}>{point}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
+            
+<div className="ml-4">
+  {resumeData.careerTimeline.map((item, index) => (
+    <div
+      key={index}
+      className="mb-8 grid grid-cols-[150px_2px_1fr] gap-6 items-start"
+    >
+      {/* Date */}
+      <div className="text-sm font-medium text-muted-foreground">
+        {item.period}
+      </div>
 
-            <Separator />
+      {/* Middle Line */}
+      <div className="bg-muted-foreground/30 w-[2px] h-full"></div>
 
-            {/* Education */}
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <GraduationCap className="w-5 h-5 text-primary" />
-                <CardTitle>Education</CardTitle>
-              </div>
-              <div className="space-y-4">
-                {resumeData.education.map((edu, index) => (
-                  <div key={index}>
-                    <p className="font-semibold text-foreground">{edu.degree}</p>
-                    <p className="text-sm">
-                      {edu.institution} - Completed {edu.completed}
-                    </p>
-                    <p className="text-sm">{edu.gpa}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+      {/* Right Content */}
+      <div>
+        <p className="font-semibold text-foreground flex items-center gap-2">
+          {item.type === 'work' ? (
+            <Briefcase className="w-4 h-4 text-primary" />
+          ) : (
+            <GraduationCap className="w-4 h-4 text-primary" />
+          )}
+          {item.title}
+        </p>
+        {item.location && (
+          <p className="text-sm italic">{item.location}</p>
+        )}
+        {item.institution && (
+          <p className="text-sm">{item.institution}</p>
+        )}
+        {item.details && (
+          <ul className="list-disc list-inside text-sm space-y-1 mt-1">
+            {item.details.map((detail, idx) => (
+              <li key={idx}>{detail}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  ))}
+</div>
+
+
+
+
 
             <Separator />
 
@@ -192,18 +195,12 @@ export default function ResumePage() {
               </div>
               <div className="text-sm space-y-2">
                 <p>{resumeData.techSummary}</p>
-
-                {/* Optional: Use badge list if you want to showcase skills visually */}
-                {/* <div className="flex flex-wrap gap-2">
-                  {["React", "Next.js", "Firebase", "Tailwind", "TypeScript"].map((tech, i) => (
-                    <Badge key={i} variant="secondary">{tech}</Badge>
-                  ))}
-                </div> */}
               </div>
             </div>
           </CardContent>
         </Card>
-                {/* Download Resume Button */}
+
+        {/* Download Resume Button */}
         <div className="flex justify-center">
           <a
             href="https://drive.google.com/file/d/14qhnVTui4Ox_uUzKiqb2HDHayFchbGiY/view"
