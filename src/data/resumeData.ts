@@ -58,7 +58,7 @@ export const resumeData = {
   ],
 
   projects: [
-    'Portfolio Website, built with Next.js, TailwindCSS, and Framer Motion. A personal site hosted on Vercel with a high-performance design focus.',
+    'Portfolio Website, built with TypeScript, Next.js, TailwindCSS, and Shadcn. A personal site hosted on Vercel with a high-performance design focus.',
     'Comox Valley Writers Society, developed using React and Firebase. A full-featured event website with CMS integration and registration capabilities.',
     'Langroove, created with React Native, Firebase, and Google Translate API. A real-time language learning chat application.',
     'Asteroid Tracker, built with TypeScript, Leaflet.js, and NASA NEO API. An interactive tracker for Near-Earth Objects with visual mapping.',
