@@ -1,6 +1,9 @@
-export const dynamic = 'force-static';
-import Image from 'next/image';
-import { MapPin } from 'lucide-react';
+export const dynamic = 'force-static'
+
+import Image from 'next/image'
+import Link from 'next/link'
+import { MapPin, GaugeCircle, ArrowRight } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 export default function ProfileHeader() {
   return (
@@ -12,6 +15,7 @@ export default function ProfileHeader() {
           alt="Abhiram Shaji"
           fill
           className="object-cover transition duration-300 ease-in-out group-hover:grayscale"
+          priority
         />
       </div>
 
@@ -22,6 +26,8 @@ export default function ProfileHeader() {
           Full Stack Developer • Designer • Creator <br />
           Exploring employment opportunities
         </h2>
+
+        
 
         {/* Location */}
         <div className="flex items-center justify-center sm:justify-start mt-3 text-muted-foreground text-sm gap-2">
@@ -36,7 +42,18 @@ export default function ProfileHeader() {
             <p>Post Graduate Diploma in Digital Design + Development</p>
           </div>
         </div>
+
+        {/* Performance pill CTA */}
+        <div className="mt-3">
+          <Button asChild variant="secondary" size="sm" aria-label="See the 100/100 PageSpeed case study">
+            <Link href="/achieving-perfect-100-google-pagespeed-insights-performance-accessibility-seo" className="inline-flex items-center">
+              <GaugeCircle className="w-4 h-4 mr-2" />
+              Perfect 100 PageSpeed case study
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </Button>
+        </div>
       </div>
     </div>
-  );
+  )
 }

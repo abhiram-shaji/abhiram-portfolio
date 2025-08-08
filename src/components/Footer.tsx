@@ -11,11 +11,17 @@ import {
   Cookie,
   IdCard,
   MapPin,
+  GaugeCircle,
 } from 'lucide-react';
 
 export const dynamic = 'force-static';
 
 const footerLinks = [
+    {
+    label: 'Perfect 100 PageSpeed Case Study',
+    href: '/achieving-perfect-100-google-pagespeed-insights-performance-accessibility-seo',
+    icon: <GaugeCircle className="w-4 h-4 mr-1 inline-block" />,
+  },
   {
     label: 'Home',
     href: '/',
