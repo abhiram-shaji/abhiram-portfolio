@@ -246,18 +246,6 @@ export default function Page() {
         </Card>
       </section>
 
-      <footer className="mt-16 flex items-center justify-between gap-4">
-        <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Abhiram Shaji
-        </p>
-        <Link
-          href="/"
-          aria-label="Return to home"
-          className="text-sm underline-offset-4 hover:underline"
-        >
-          Home
-        </Link>
-      </footer>
     </main>
   )
 }
