@@ -16,7 +16,7 @@ export const resumeData = {
       type: 'work',
       title: 'Founder and Developer @ The Digital Uplift',
       location: 'Victoria, BC',
-      period: 'Jan 2024',
+      period: 'Jan 2025',
       details: [
         'Launched thedigitaluplift.ca targeting local businesses',
         'Achieved Lighthouse scores of 100 in SEO, Accessibility, Best Practices',
