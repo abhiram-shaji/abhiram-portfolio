@@ -16,7 +16,7 @@ export const resumeData = {
       type: 'work',
       title: 'Founder and Developer @ The Digital Uplift',
       location: 'Victoria, BC',
-      period: 'Jan 2024 – Present',
+      period: 'Jan 2024',
       details: [
         'Launched thedigitaluplift.ca targeting local businesses',
         'Achieved Lighthouse scores of 100 in SEO, Accessibility, Best Practices',
@@ -30,14 +30,14 @@ export const resumeData = {
       title: 'Post-Graduate Diploma in Mobile and Web App Development',
       institution: 'North Island College, British Columbia',
       location: 'British Columbia, Canada',
-      period: 'Jan 2023 – Dec 2024',
+      period: 'Jan 2023',
       details: ['GPA: 3.42 / 4.33'],
     },
         {
       type: 'work',
       title: 'Software Engineer @ Deloitte USI Consulting',
       location: 'Bangalore, India',
-      period: 'Jan 2022 – Oct 2022',
+      period: 'Jan 2022',
       details: [
         'Built internal dashboards using .NET, JavaScript, SQL',
         'Contributed to backend scalability and UI optimization',
@@ -50,7 +50,7 @@ export const resumeData = {
       title: 'Bachelor of Engineering in Computer Science',
       institution: 'Bangalore City University, India',
       location: 'Bangalore, India',
-      period: 'Sept 2017 – Sept 2021',
+      period: 'Sept 2017',
       details: ['CGPA: 7.94 / 10 (approx. 3.3 GPA)'],
     },
 
