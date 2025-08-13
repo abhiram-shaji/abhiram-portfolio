@@ -127,7 +127,7 @@ export default function ResumePage() {
   {resumeData.careerTimeline.map((item, index) => (
     <div
       key={index}
-      className="mb-8 grid grid-cols-[150px_2px_1fr] gap-6 items-start"
+      className="mb-8 grid grid-cols-[62px_2px_1fr] gap-6 items-start"
     >
       {/* Date */}
       <div className="text-sm font-medium text-muted-foreground">
